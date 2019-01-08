@@ -1,1 +1,8 @@
+#staff_picture {
+  border-radius: 50%;
+  width: 60%;
+}
 
+.row {
+  margin-bottom: 50px;
+}
