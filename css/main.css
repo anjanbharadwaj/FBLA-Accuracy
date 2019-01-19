@@ -1802,7 +1802,7 @@ h1, h2, h3, h4, h5, h6 {
 .header-area {
   padding: 10px 0;
   position: relative;
-  background-color: #c22121;
+  background-color: white;
   width: 100%;
   z-index: 999999;
   -webkit-transition: all 0.4s ease 0s;
@@ -1853,17 +1853,17 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center; }
   .menu-left a {
     margin-right: 32px;
-    color: #000;
+    color: red;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-family: Poppins, sans-serif;
     font-size: 1.2vw;
-    font-weight: 500; }
+    font-weight: 800; }
     @media (max-width: 991px) {
       .menu-left a {
         margin-right: 7px; } }
     .menu-left a:hover, .menu-left a.active {
-      color: white; }
+      color: #840a03; }
     .menu-left a:last-child {
       margin-right: 0; }
   @media (max-width: 767px) {
@@ -1872,14 +1872,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .menu-right li a {
   margin-right: 32px;
-  color: #000;
+  color: red;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 1.2vw;
   font-family: Poppins, sans-serif;
-  font-weight: 500; }
+  font-weight: 800; }
   .menu-right li a:hover, .menu-right li a.active {
-    color: white; }
+    color: #840a03; }
   @media (max-width: 1199px) {
     .menu-right li a {
       margin-right: 16px; } }
@@ -1915,7 +1915,7 @@ h1, h2, h3, h4, h5, h6 {
       display: block; } }
 
 .dropdown-menu {
-  background-color: #951616;
+  background-color: #f4f4f4;
 }
 
 .default-header {
