@@ -11,3 +11,20 @@
 .catch-phrase-left {
   
 }
+
+
+#cp1, #cp2, #cp3 {
+  transition: all .2s ease-in-out;
+}
+
+#cp2:hover {
+  background-color: #f7f7f7;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#cp1:hover, #cp3:hover {
+  background-color: #d32121;
+  transform: scale(1.1);
+  cursor: pointer;
+}
