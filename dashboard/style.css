@@ -19,7 +19,7 @@
 /*----------------------------------------*/
 /*  1.  Theme default CSS
 /*----------------------------------------*/
-html, body {height: 100%; font-family: 'Roboto', sans-serif;font-weight:400;background:#152036;}
+html, body {height: 100%; font-family: 'Roboto', sans-serif;font-weight:400;background:#ffffff;}
 .floatleft {float:left}
 .floatright {float:right}
 .alignleft {float:left;margin-right:15px;margin-bottom: 15px}
@@ -98,13 +98,14 @@ body {}
     width: 240px;
 }
 #sidebar {
-    min-width: 205px;
-    background: #1b2a47;
-    color: #fff;
-	position:fixed;
-    transition: all 0.3s;
-	z-index:999;
-	height:100%;
+  min-width: 205px;
+  background: #ffffff;
+  color: #fff;
+  position:fixed;
+  transition: all 0.3s;
+  z-index:999;
+  height:100%;
+  display: table;
 }
 .mini-navbar .all-content-wrapper {
     margin-left: 80px;
@@ -133,17 +134,19 @@ body {}
     padding: 1px 0px;
 	position: relative;
     z-index: 99999;
-    background: #1b2a47;
+    background: #ffffff;
 }
 #sidebar .sidebar-header strong {
     display: none;
     font-size: 1.8em;
 }
 .nalika-profile {
-    padding: 20px;
-	position: relative;
-    z-index: 99999;
-    background: #1b2a47;
+  padding: 20px;
+  position: relative;
+  z-index: 99999;
+  background: #d04646;
+  display: table-cell;
+  vertical-align: middle;
 }
 .profile-dtl {
     text-align: center;
@@ -286,7 +289,7 @@ ul.dtl-social li a{
 	border:none;
 }
 .footer-copyright-area {
-    background: #1b2a47;
+    background: #d04646;
     padding: 20px 0px;
     text-align: center;
 }
@@ -382,7 +385,7 @@ ul.dtl-social li a{
 	top:130%;
 	left:-10px;
 	width:200px;
-	background:#303030;
+	background:#d04646;
 	opacity:0;
 	transition: all 0.5s ease 0s;
 	z-index:999;
@@ -496,7 +499,7 @@ ul.dtl-social li a{
 	position:absolute;
 	height:5px;
 	width:5px;
-	background:#03a9f4;
+	background:#d04646;
 	border-radius:50%;
 	top: -5px;
     right: 0px;
@@ -806,7 +809,7 @@ ul.setting-panel-list li{
 }
 .breadcome-list {
     padding:20px;
-	background:#1b2a47;
+	background:#d04646;
 	margin:30px 0px;
 }
 .breadcome-heading .form-control, .breadcome-heading .form-control:focus {
@@ -945,11 +948,11 @@ ul.breadcome-menu li a:hover{
 }
 .analysis-progrebar-ctn{
 	padding:20px;
-	background:#1b2a47;
+	background:#d04646;
 }
 .product-sales-chart, .analytics-info-cs, .tranffic-als-inner, .analytics-rounded, .single-new-trend, .personal-info-wrap, .author-widgets-single, .calender-inner, .product-status-wrap, .review-tab-pro-inner, .income-dashone-total, .analytics-nalika-wrap, .analytics-sparkle-line, .analysis-progrebar, .sparkline8-list, .sparkline9-list, .sparkline7-list, .sparkline10-list, .sparkline12-list, .sparkline13-list, .sparkline14-list, .sparkline13-list, .sparkline11-list, .x-editable-list, .code-editor-single, .blog-details-inner, .charts-single-pro, .about-sparkline, .sparkline-list, .button-ad-wrap, .tab-content-details, .sparkline16-list, .sparkline15-list, .tinymce-single{
 	padding:20px;
-	background:#1b2a47;
+	background:#d04646;
 }
 .graph-rp{
 	text-align:right;
@@ -1188,7 +1191,7 @@ ul.two-part-sp li{
 }
 .header-top-area {
     position: fixed;
-    background: #1b2a47;
+    background: #d04646;
     z-index: 99;
     left: 200px;
     right: 0;
