@@ -1,3 +1,36 @@
+
+input, textarea  {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		background: rgba(255, 255, 255, 0.025);
+		border-radius: 5px;
+		border: none;
+		border: solid 2px rgba(255, 255, 255, 0.3);
+		color: white;
+		display: block;
+		outline: 0;
+		padding: 0 1em;
+		text-decoration: none;
+		width: 100%;
+	}
+
+  input::placeholder, textarea::placeholder {
+    color: white;
+    font-size: 1.5vw;
+  }
+
+  label {
+    color: white;
+  }
+
+  input:focus, textarea:focus {
+    border: solid 2px rgba(100, 100, 100, 0.3);
+
+  }
+
+
 #staff_picture {
   border-radius: 50%;
   width: 60%;
@@ -9,7 +42,7 @@
 
 
 .catch-phrase-left {
-  
+
 }
 
 
@@ -18,13 +51,11 @@
 }
 
 #cp2:hover {
-  background-color: #f7f7f7;
   transform: scale(1.1);
   cursor: pointer;
 }
 
 #cp1:hover, #cp3:hover {
-  background-color: #d32121;
   transform: scale(1.1);
   cursor: pointer;
 }
