@@ -8,12 +8,12 @@
 /* =================================== */
 ::-moz-selection {
   /* Code for Firefox */
-  background-color: #ad9966;
+  background-color: gray;
   color: #fff; }
 
 ::selection {
-  background-color: #ad9966;
-  color: #fff; }
+ background-color: gray;
+color: #fff; }
 
 ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
@@ -69,7 +69,7 @@ textarea:focus, .form-control:focus, button:focus {
 
 body {
   color: #777777;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.7;
@@ -136,7 +136,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Playfair Display", serif;
+  font-family: "Source Sans Pro", sans-serif;
   color: #000;
   line-height: 1.2em;
   margin-bottom: 0;
@@ -151,7 +151,7 @@ h6 {
 .h6 {
   margin-bottom: 0;
   margin-top: 0;
-  font-family: "Playfair Display", serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: normal;
   color: #000; }
 
@@ -1802,7 +1802,7 @@ h1, h2, h3, h4, h5, h6 {
 .header-area {
   padding: 10px 0;
   position: relative;
-  background-color: #fff;
+  background-color: white;
   width: 100%;
   z-index: 999999;
   -webkit-transition: all 0.4s ease 0s;
@@ -1853,16 +1853,17 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center; }
   .menu-left a {
     margin-right: 32px;
-    color: #000;
+    color: red;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 500; }
+    font-family: Poppins, sans-serif;
+    font-size: 1.2vw;
+    font-weight: 800; }
     @media (max-width: 991px) {
       .menu-left a {
         margin-right: 7px; } }
     .menu-left a:hover, .menu-left a.active {
-      color: #ad9966; }
+      color: #840a03; }
     .menu-left a:last-child {
       margin-right: 0; }
   @media (max-width: 767px) {
@@ -1871,13 +1872,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .menu-right li a {
   margin-right: 32px;
-  color: #000;
+  color: red;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: 13px;
-  font-weight: 500; }
+  font-size: 1.2vw;
+  font-family: Poppins, sans-serif;
+  font-weight: 800; }
   .menu-right li a:hover, .menu-right li a.active {
-    color: #ad9966; }
+    color: #840a03; }
   @media (max-width: 1199px) {
     .menu-right li a {
       margin-right: 16px; } }
@@ -1887,7 +1889,8 @@ h1, h2, h3, h4, h5, h6 {
       letter-spacing: normal; } }
 .menu-right li .dropdown-menu {
   border-radius: 0;
-  margin-top: 5px;
+  margin-top: 0px;
+  padding-top: none !important;
   border: none; }
   @media (max-width: 767px) {
     .menu-right li .dropdown-menu {
@@ -1911,6 +1914,10 @@ h1, h2, h3, h4, h5, h6 {
     .menu-right .hide-lg {
       display: block; } }
 
+.dropdown-menu {
+  background-color: #f4f4f4;
+}
+
 .default-header {
   background-color: #fff;
   padding: 20px 0;
@@ -1923,7 +1930,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Start Home Banner Area
 ============================================================================================ */
 .home-banner-area {
-  background: url(../img/header-bg.png) no-repeat center; }
+  background: url(../img/header-bg.jpg) no-repeat center center/cover; }
   .home-banner-area .height {
     height: 750px; }
   @media (max-width: 991px) {
