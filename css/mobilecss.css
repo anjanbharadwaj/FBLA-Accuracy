@@ -1,0 +1,68 @@
+@media only screen and (max-width:420px) {
+
+    #contactUS1 {
+        float: none !important;
+        width: 100% !important;
+        font-size: 13px !important;
+        padding: 5px !important;
+    }
+
+    #contactUSForm {
+        float: none !important;
+        width: 100% !important;
+        padding: 2px 8vw !important;
+    }
+
+    #buttonForm {
+        margin: 0 auto !important;
+        font-size: 20px !important;
+        width: 40% !important;
+        height: 40px !important;
+    }
+
+    label {
+        font-size: 13px !important;
+    }
+    input::placeholder, textarea::placeholder {
+        font-size: 13px !important;
+    }
+
+    input {
+        height: 25px !important;
+        font-size: 13px !important;
+    }
+
+    textarea {
+        font-size: 13px !important;
+    }
+
+    .menu-right li a {
+        font-size: 13px !important;
+    }
+    .dropdown-menu {
+        background-color: inherit !important;
+    }
+
+    #logoNav {
+        padding: 5px !important;
+    }
+
+    #accuracyText {
+        height: 30vh !important;
+    }
+
+    .cpT {
+        width: 70% !important;
+        padding: 0 9px !important;
+        font-size: 4vw !important;
+        text-align: left !important;
+    }
+
+    .cpImg {
+        width: 30% !important;
+    }
+
+    #cp2P {
+        width: 100% !important;
+    }
+}

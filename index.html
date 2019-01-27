@@ -6,10 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta charset="UTF-8">
 
+	<link rel="stylesheet" href="css/linearicons.css">
+
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/mobilecss.css">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
@@ -21,9 +24,7 @@ Cool stuff that we could add
 animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 
 -->
-	<section>
-		<embed src="img/Accuracy_Swf_fade.swf">
-	</section>
+
 	<header class="header-area">
 		<div class="container">
 			<div class="header-wrap">
@@ -40,7 +41,7 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 					<!-- Logo of the navbar -->
 					<div class="col-3 logo">
 						<a href="index.html">
-							<img class="mx-auto" src="img/logo.png" alt="" style="padding: 10px; border-radius: 50%; background-color: white;">
+							<img id="logoNav" class="mx-auto" src="img/logo.png" alt="" style="padding: 10px; border-radius: 50%; background-color: white;">
 						</a>
 					</div>
 
@@ -49,12 +50,17 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 
 						<!-- Toggler/collapsibe Button -->
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-							<span class="lnr lnr-menu"></span>
+							<span class="lnr lnr-menu" style="color:white;"></span>
 						</button>
 
 						<div class="collapse navbar-collapse menu-right" id="collapsibleNavbar">
 							<ul class="navbar-nav justify-content-center w-100">
-
+								<li class="nav-item hide-lg">
+									<a class="nav-link" href="about.html">About</a>
+								</li>
+								<li class="nav-item hide-lg">
+									<a class="nav-link" href="menu.html">Schedue</a>
+								</li>
 								<!-- Dropdown -->
 								<li class="nav-item dropdown">
 									<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -78,6 +84,10 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 			</div>
 		</div>
 	</header>
+<section>
+	<embed src="img/Accuracy_Swf_fade.swf">
+</section>
+
 	<!--
 	<section class="home-banner-area relative">
 		<div class="container">
@@ -92,7 +102,7 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 	</section>-->
 
 	<section><br><br>
-		<div class="container" style="padding: 0; border-radius: 5px; width: 90vw; height: 80vh;
+		<div class="container" id="accuracyText" style="padding: 0; border-radius: 5px; width: 90vw; height: 38vw;
 		display: table; text-align: center; background-color: white;">
 			<span class="shadow" style="display: table-cell; border-radius: 5px;
   vertical-align: middle;">
@@ -103,60 +113,84 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 		</div>
 
 	</section>
-	<br><br>
+	<br><br>   
 
 	<!-- catch phrases -->
-	<section style="height: 200vh;">
-		<div class="container" style="height: 60vh; ">
+	<section >
+		<div class="container" style="height: 30vw; ">
 
-			<div class="container" style="background: url('img/img1.jpg') no-repeat center center/cover;
+			<div class="cpImg container" style="background: url('img/img1.jpg') no-repeat center center/cover;
 			float: right; width: 50%; height: 100%;">
 
 			</div>
-			<div style=" top: 50%; transform: translate(0, -50%);
-				position: relative; width: 50%; height: 50%;
-				color: white; text-align: left;
+			<div class="cpT" style="position: relative; width: 50%; height: 50%;
+				color: white; text-align: left; padding-right:50px;
 					font-size: 2.5vw;">
 					<font style="font-size: 2em;">Revolutionizing</font> <br>the Financial System
+					<br><font style="font-size: 0.7em; line-height:150%"><p>
+						Accuracy truly revolutionizes the
+						financial system by providing top customer
+						care and support 24/7 with our team of qualified analysts,
+				and financial experts.</p>
+					</font>
 			</div>
 
 		</div>
 		<br><br>
-		<div class="container" style="height: 60vh; ">
+		<div class="container" style="height: 30vw; ">
 
-			<div class="container" style="background: url('img/img2.jpg') no-repeat center center/cover;
+			<div class="cpImg container" style="background: url('img/img2.jpg') no-repeat center center/cover;
 			float: left; width: 50%; height: 100%;">
 
 			</div>
-			<div style=" top: 50%; transform: translate(0, -50%);
+			<div class="cpT" style="padding-left: 10px;
 				position: relative; width: 50%; height: 50%;
 				color: white; text-align: right; float: right;
 					font-size: 2.5vw;">
-				<font style="font-size:1.5em">Wealth Management</font>
-				<br>Simplified
+				<font style="font-size:2.5em">Simplified</font>
+				<br>Wealth Management<br><font style="text-align: left; font-size: 0.7em; line-height:150%">
+				<p id="cp2P" style="width:70%; float: right;">
+				Accuracy simplifies wealth by including all your information
+				in an organized and easy to read web portal which updates in
+				real-time as our analysts process your information.</p>
+			</font>
 			</div>
 
 		</div>
 		<br><br>
-		<div class="container" style="height: 60vh; ">
+		<div class="container" style="height: 30vw; ">
 
-			<div class="container" style="background: url('img/img3.jpg') no-repeat center center/cover;
+			<div class="cpImg container" style="background: url('img/img3.jpg') no-repeat center center/cover;
 			float: right; width: 50%; height: 100%;">
 
 			</div>
-			<div style=" top: 50%; transform: translate(0, -50%);
-				position: relative; width: 45%; height: 50%;
-				color: white; text-align: left;
+			<div class="cpT" style="position: relative; width: 50%; height: 50%;
+				color: white; text-align: left; padding-right:50px;
 					font-size: 2.5vw;">
-				<font style="font-size: 2.4em;">Analytics</font><br> at your Fingertips
+				<font style="font-size: 2em;">Analytics</font> <br>at your Fingertips
+				<br><font style="font-size: 0.7em; line-height:150%"><p>
+				Our web portals come fully equipped with an
+				arsenal of powerful deep machine learning to give you the predictive power
+				to adapt your business practices to meet the changes tides of the market. </p>
+			</font>
 			</div>
 
 		</div>
 	</section>
-
-	<section id="footer" style="background-image: linear-gradient(#db2c49, #f46675);">
+	<br><br><br>
+	<section style="background-image: linear-gradient(#db2c49, #f4636e);">
 		<div class="inner" style="font-size: 1.5vw;">
-			<div style="position: relative; padding: 20px 8vw; width: 50%; float: left; height: 100%;">
+
+			<div id="contactUS1" style="text-align: center; float: left; padding: 20px; width: 48%; height: 100%;">
+				<div style="position: relative; top: 50%; transform: translate(0, 14%);">
+					<h1 style="color: white; font-size: 2em;">
+						<font style="font-size: 2em;">Contact</font><br>Accuracy</h1>
+					<p style="color: white">contact.accuracy19@gmail.com</p>
+				</div>
+				</ul>
+			</div>
+
+			<div id="contactUSForm" style=" padding: 20px 8vw; width: 50%; float: left; height: 100%;">
 				<form id="gform" >
 					<div class="field">
 						<label for="name">Name</label>
@@ -171,89 +205,21 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 						<textarea name="message" id="message" rows="7" placeholder="Tell me what is on your mind"></textarea>
 					</div>
 					<br>
-					<button class=""
-					 style="background-color: transparent; border-radius; 15px; color: white;
+					<button id="buttonForm"
+					 style="background-color: transparent; border-radius: 8px; color: white;
 					border: solid 2px rgba(255, 255, 255, 0.3);">
 							<i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+
+					<br><br><br>
 				</form>
 			</div>
 
-			<div style="text-align: center; position: relative; float: left; padding: 20px; width: 48%; height: 100%;">
-					<div style="position: relative; top: 50%; transform: translate(0, 14%);">
-							<h1 style="color: white; font-size: 4vw;">
-								<font style="font-size: 7vw;">Contact</font><br>Accuracy</h1><br>
-						<a href="#">contact.bayco@gmail.com</a><br>
-						<a href="https://www.facebook.com/BAYCO-1478842622193528/">facebook/BAYCO</a><br>
-						<a href="https://www.instagram.com/baycareeropportunities/">instagram/BAYCO</a><br>
-					</div>
-				</ul>
-			</div>
-		</div>
-				</section>
-	<!--
-	<section>
 
-		<div class="row" style="margin: 0; width: 100%; height: 80vh; background-color: red;">
-			<div class="col-sm-6" style="height: 100%; display: table;">
-				<div  style="
-				display: table-cell; vertical-align: middle;">
-					<div id="cp1" style="margin: 0 auto; width: 80%; border-radius: 25px;
-					  color: white; text-align: center;
-					font-size: 4vw;">
-						Revolutionizing the Financial System
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6"  style="background: url('img/img1.jpg') no-repeat center center/cover">
-
-			</div>
 		</div>
 
 	</section>
 
-	<section>
-		<div class="row" style="margin: 0; width: 100%; height: 80vh; background-color: white;">
-			<div class="col-sm-5" style="background: url('img/img2.jpg') no-repeat center center/cover">
-			</div>
-			<div class="col-sm-7" style="height: 100%; display: table;">
-				<div style="
-				display: table-cell; vertical-align: middle;">
-					<div id="cp2" style="margin: 0 auto; width: 80%; border-radius: 25px;
-					 color: red; text-align: center;
-					font-size: 4vw;">
-						Wealth Management Simplified
-					</div>
-				</div>
-			</div>
 
-			</div>
-		</div>
-
-	</section>
-
-	<section>
-		<div class="row" style="margin: 0; width: 100%; height: 80vh; background-color: red;">
-		<div class="col-sm-6" style="height: 100%; display: table;">
-			<div style="
-				display: table-cell; vertical-align: middle;">
-				<div id="cp3" style="margin: 0 auto; width: 80%; border-radius: 25px;
-					 color: white; text-align: center;
-					font-size: 4vw;">
-					Analytics at your Fingertips
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6"  style="background: url('img/img3.jpg') no-repeat center center/cover">
-
-		</div>
-		</div>
-	</section>
-
-	<section>
-
-
-	</section>
-	-->
 
 
 
