@@ -50,12 +50,14 @@ $(document).ready(function () {
                 margin: 0,
                 items: 1,
                 nav: true,
-                autoplay: 2500,
+                autoplay: 3000,
                 smartSpeed: 1500,
                 dots: false,
                 navText: ['<img src="img/left-arrow.png">', '<img src="img/right-arrow.png">'],
                 responsiveClass: true
-            })
+            });
+
+
         }
     }
     cta_slider();

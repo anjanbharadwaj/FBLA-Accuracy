@@ -74,7 +74,7 @@ body {
   font-weight: 400;
   line-height: 1.7;
   position: relative;
-  background-color: #db2c49;
+  background-color: #db2c49 !important;
 }
 ol,
 ul {
@@ -2215,11 +2215,11 @@ h1, h2, h3, h4, h5, h6 {
 .callto-action-area {
   position: relative; }
   .callto-action-area .owl-nav img {
-    -webkit-filter: opacity(20%);
-    -moz-filter: opacity(20%);
-    -ms-filter: opacity(20%);
-    -o-filter: opacity(20%);
-    filter: opacity(20%);
+    -webkit-filter: opacity(50%);
+    -moz-filter: opacity(50%);
+    -ms-filter: opacity(50%);
+    -o-filter: opacity(50%);
+    filter: opacity(50%);
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
     -o-transition: all 0.4s ease 0s;

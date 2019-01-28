@@ -6,14 +6,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta charset="UTF-8">
 
+	<link rel="stylesheet" href="css/linearicons.css">
+
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/mobilecss.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+
+
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-</head>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"></head>
 <body>
 <!--
 Cool stuff that we could add
@@ -22,59 +28,64 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 
 -->
 	<header class="header-area">
-		<div class="container">
-			<div class="header-wrap">
+	<div class="container">
+		<div class="header-wrap">
 
-				<div class="header-top d-flex justify-content-between align-items-center navbar-expand-md">
+			<div class="header-top d-flex justify-content-between align-items-center navbar-expand-md">
 
 
-					<!-- LEFT NAV - This nav bar is to the left of the logo -->
-					<div class="col menu-left">
-						<a href="about.html">About</a>
-						<a href="menu.html">Schedule</a>
-					</div>
-
-					<!-- Logo of the navbar -->
-					<div class="col-3 logo">
-						<a href="index.html">
-							<img class="mx-auto" src="img/logo.png" alt="" style="padding: 10px; border-radius: 50%; background-color: white;">
-						</a>
-					</div>
-
-					<!-- RIGHT NAV - This nav bar is to the right of the logo -->
-					<nav class="col navbar navbar-expand-md justify-content-end">
-
-						<!-- Toggler/collapsibe Button -->
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-							<span class="lnr lnr-menu"></span>
-						</button>
-
-						<div class="collapse navbar-collapse menu-right" id="collapsibleNavbar">
-							<ul class="navbar-nav justify-content-center w-100">
-
-								<!-- Dropdown -->
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-										Services
-									</a>
-									<div class="dropdown-menu">
-										<a class="dropdown-item" href="elements.html">Pricing</a>
-										<a class="dropdown-item" href="elements.html">FAQs</a>
-									</div>
-								</li>
-
-								<li class="nav-item">
-									<a class="nav-link" href="gallery.html">Contact</a>
-								</li>
-
-							</ul>
-						</div>
-					</nav>
-
+				<!-- LEFT NAV - This nav bar is to the left of the logo -->
+				<div class="col menu-left">
+					<a href="index.html">Home</a>
+					<a href="menu.html">Schedule</a>
 				</div>
+
+				<!-- Logo of the navbar -->
+				<div class="col-3 logo">
+					<a href="index.html">
+						<img id="logoNav" class="mx-auto" src="img/logo.png" alt="" style="padding: 10px; border-radius: 50%; background-color: white;">
+					</a>
+				</div>
+
+				<!-- RIGHT NAV - This nav bar is to the right of the logo -->
+				<nav class="col navbar navbar-expand-md justify-content-end">
+
+					<!-- Toggler/collapsibe Button -->
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+						<span class="lnr lnr-menu" style="color:white;"></span>
+					</button>
+
+					<div class="collapse navbar-collapse menu-right" id="collapsibleNavbar">
+						<ul class="navbar-nav justify-content-center w-100">
+							<li class="nav-item hide-lg">
+								<a class="nav-link" href="index.html">Home</a>
+							</li>
+							<li class="nav-item hide-lg">
+								<a class="nav-link" href="menu.html">Schedue</a>
+							</li>
+							<!-- Dropdown -->
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+									Services
+								</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="elements.html">Pricing</a>
+									<a class="dropdown-item" href="elements.html">FAQs</a>
+								</div>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="gallery.html">Contact</a>
+							</li>
+
+						</ul>
+					</div>
+				</nav>
+
 			</div>
 		</div>
-	</header>
+	</div>
+</header>
 	<!--
 	<section class="home-banner-area relative">
 		<div class="container">
@@ -88,8 +99,194 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 		</div>
 	</section>-->
 
+	<section style="background-color: white; padding: 5vw;">
+		<div class="container" style="text-align: center;">
+			<h1 class="aboutTitle">Our History</h1>
+			<p class="aboutInfo" style="text-align: left;">
+				&emsp;Accuracy accounting has been revolutionizing the accounting field for the last 75 years.
+				Formed shortly after the great depression, we were fed up with the corruption and greed
+				of corporate America and strove to create an organization founded on loyalty, trust,
+				and compassion for our members. With humble beginnings out of our college dorm room at
+				Yale, we have always remained bold and audacious in our goals; we now have over 900
+				employees and 100 corporate partnerships with fortune 1000 companies.
+				Yet as we grow, we never forget to stay true to our core values and remember
+				to serve the needs of our clients. As we expand our services to include bookkeeping,
+				taxes, and audits, we have been looked to magnify our social good; since inception,
+				we have been donating 5% of profits to our alma mater, Yale, to give the gift of education
+				to as many young minds as possible.
+			</p>
+		</div>
+	</section>
+
+	<section style="padding: 5vw;">
+		<div class="container" style="text-align: center;">
+			<h1 class="aboutTitle" style="color:white">Our Staff</h1>
+			<p class="aboutInfo" style="text-align: left; color:white">
+				&emsp;Accuracy aims at making the best hiring decisions possible.
+				With a focus on customer service and integrity in everything we do -
+				accuracy heavily screens applicants on not only skills in finance and
+				accounting but also interpersonal skills required to successfully deal
+				effectively with large companies. Want to join our team? Got a great idea for us?
+				Send a resume to jobs@accuracy.com and we’ll get back to you shortly with
+				more information about an interview date and time.
+			</p>
+		</div>
+		<div class="row" style="padding: 1vw; margin: 0 auto; width: 100%;">
+			<div class="col-md-5 shadow staffCard">
+
+				<div style="
+				padding:10px; width:40%; display: inline-block;">
+					<img class="img-fluid" style="border-radius:50%;" src="img/staff/staff-1.jpg">
+
+
+				</div>
+				<div style="width:55%; display:inline-block; padding: 0 10px;">
+					<h1 class="staffName">Anjan Mohan</h1>
+					<h3 class="staffPosition" >CEO & Founder</h3>
+				</div>
+			</div>
+
+
+			<div class="col-md-5 ml-auto shadow staffCard">
+				<div style="
+				padding:10px; width:40%; display: inline-block;">
+					<img class="img-fluid" style="border-radius:50%;" src="img/staff/staff-1.jpg">
+
+
+				</div>
+				<div style="width:55%; display:inline-block; padding: 0 10px;">
+					<h1 class="staffName">Anjan Mohan</h1>
+					<h3 class="staffPosition">CEO & Founder</h3>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="padding: 1vw; margin: 0 auto; width: 100%;">
+			<div class="col-md-5 shadow staffCard">
+
+				<div style="
+				padding:10px; width:40%; display: inline-block;">
+					<img class="img-fluid" style="border-radius:50%;" src="img/staff/staff-1.jpg">
+
+
+				</div>
+				<div style="width:55%; display:inline-block; padding: 0 10px;">
+					<h1 class="staffName">Anjan Mohan</h1>
+					<h3 class="staffPosition" >CEO & Founder</h3>
+				</div>
+			</div>
+
+
+			<div class="col-md-5 ml-auto shadow staffCard">
+				<div style="
+				padding:10px; width:40%; display: inline-block;">
+					<img class="img-fluid" style="border-radius:50%;" src="img/staff/staff-1.jpg">
+
+
+				</div>
+				<div style="width:55%; display:inline-block; padding: 0 10px;">
+					<h1 class="staffName">Anjan Mohan</h1>
+					<h3 class="staffPosition">CEO & Founder</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section style="padding: 5vw; background-color: white">
+		<div class="container" style="text-align: center; padding-bottom: 2vw;">
+			<h1 class="aboutTitle2">How We Give Back</h1>
+		</div>
+	</section>
+
+	<section style="padding: 5vw;">
+		<div class="container" style="text-align: center; padding-bottom: 2vw;">
+			<h1 class="aboutTitle1" style="color:white;">Testimonials</h1>
+		</div>
+
+		<div class="container" >
+			<div class="callto-action-area relative">
+				<div class="row d-flex justify-content-center">
+					<div class="col-lg-12 p-0">
+
+
+
+						<div class="cta-owl owl-carousel">
+							<div>
+							<div class="testimonyD" style="display: table; width: 100%; background-color: white; border-radius: 5px; color: white;">
+								<div class="col-md-4" style="float: left; padding:10px;">
+									<img class="img-fluid tImg" style="border-radius:50%;" src="img/staff/staff-1.jpg">
+								</div>
+								<div class="col-md-8" style="float: left; padding:10px;">
+									<h1 class="staffName" style="color:#d01d33;">Saketh Bijuth, CEO of Cars4Kids</h1>
+									<p class="testimonyP">
+										“When I cam to accuracy my startup had less than $10,000 in sales,
+										and our accounting was mainly done on scraps of paper and
+										disorganized Excel spreadsheets. Accuracy completely changed our
+										accounting system, providing easy to read dashboards and real
+										time deep trend analysis of our core metrics”
+									</p>
+								</div>
+							</div>
+							</div>
+							<div>
+							<div class="testimonyD" style="display: table; width: 100%; background-color: white; border-radius: 5px; color: #d01d33;">
+								<div class="col-md-4" style="float: left; padding:10px;">
+									<img class="img-fluid tImg" style="border-radius:50%;" src="img/staff/staff-1.jpg">
+								</div>
+								<div class="col-md-8" style="float: left; padding:10px;">
+									<h1 class="staffName" style="color:#d01d33;">Todd Westin, CFO of Splunkin</h1>
+									<p class="testimonyP">
+										“Accuracy is the accountant of the future;
+										combining excellent customer service with big data
+										analytics to give deep insight into
+										exactly what a company can do to improve!”
+									</p>
+								</div>
+							</div>
+							</div>
+
+							<div>
+							<div class="testimonyD" style="display: table; width: 100%; background-color: white; border-radius: 5px; color: #d01d33;">
+								<div class="col-md-4" style="float: left; padding:10px;">
+									<img class="img-fluid tImg" style="border-radius:50%;" src="img/staff/staff-1.jpg">
+								</div>
+								<div class="col-md-8" style="float: left; padding:10px;">
+									<h1 class="staffName" style="color:#d01d33;">Jill Smith, President and Founder of the Westin</h1>
+									<p class="testimonyP">
+										“Ever since making the switch to Accuracy, our sales have tripled in just under a month!”
+									</p>
+								</div>
+							</div>
+							</div>
+							<div>
+							<div class="testimonyD" style="display: table; width: 100%; background-color: white; border-radius: 5px; color: #d01d33;">
+								<div class="col-md-4" style="float: left; padding:10px;">
+									<img class="img-fluid tImg" style="border-radius:50%;" src="img/staff/staff-1.jpg">
+								</div>
+								<div class="col-md-8" style="float: left; padding:20px;">
+									<h1 class="staffName" style="color:#d01d33;">Antonio Juarez ~ Co founder of Knick-Nack</h1>
+									<p class="testimonyP">
+										“Forget clunky and expensive software or god forbid paper,
+										letting Accuracy handle our back end economics was one
+										of the best decisions I’ve made!”
+									</p>
+								</div>
+							</div>
+							</div>
+
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+
+	<!--
 	<section>
-		<!-- Staff Section -->
+		<!-- Staff Section
 		<div class="container">
 		<div class="row">
 		<div class="col-sm">
@@ -187,7 +384,7 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 		</div>
 
 	</section>
-
+	-->
 
 
 
