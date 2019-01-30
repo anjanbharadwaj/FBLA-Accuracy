@@ -1,5 +1,13 @@
 @media only screen and (max-width:420px) {
 
+    #questionsFAQ {
+        font-size: 10vw !important;
+    }
+
+    #faqTitle {
+        padding-top: 10vh !important;
+        font-size: 6vw !important;
+    }
 
     .aboutTitle {
         font-size: 5em !important;
