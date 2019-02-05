@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"></head>
 </head>
 <body>
 <!--
@@ -41,7 +42,7 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 
                 <!-- Logo of the navbar -->
                 <div class="col-3 logo">
-                    <a href="index.html">
+                    <a href="home.html">
                         <img id="logoNav" class="mx-auto" src="img/logo.png" alt="" style="padding: 10px; border-radius: 50%; background-color: white;">
                     </a>
                 </div>
@@ -64,11 +65,11 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
+                                <a class="nav-link" href="home.html">Home</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
+                                <a class="nav-link" href="Login-Signup/index.html" target="_blank">Portal</a>
                             </li>
 
                         </ul>
@@ -80,8 +81,112 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
     </div>
 </header>
 
+<section style="background-color: white; padding: 5vw;">
+    <div class="container" style="text-align: center;">
+        <h1 class="aboutTitle">Pricing Plans</h1>
+
+    </div>
+
+    <div style="width: 100%; padding: 55px 2vw; display: table;">
+        <div class="col-md-3" style="float: left;">
+            <div id="divP1" style="width:100%; text-align:center;" class="price">
+              <h1 class="pricingHeaders">Free</h1>
+                <div class="priceMoney">
+                    $<b class="priceNumber">0</b>
+                    <br>monthly
+
+                </div>
+                <button class="buyButton" onclick="toggleActiveClass(1)">Buy It</button>
+
+              <div style=" text-align: left; padding:10%;">
+                  <p><i>Essential features including:</i></p><hr>
+                  <p>General Ledger</p><hr>
+                  <p>Major financial statements created annually</p><hr>
+                  <p>Access to Portal</p><hr>
+                  <p>View Baseline Financial Reports</p>
+                  <hr>
+                  <p>Statement of Financial Position</p>
+                  <hr>
+                  <p>Income Statement</p>
+                  <hr>
+                  <p>Cash Flow Statement</p>
+                  <hr>
+                  <p>Statement of Changes in Equity</p>
+              </div>
+
+            </div>
+        </div>
+        <div class="col-md-3" style="float: left;">
+            <div id="divP2" style="width:100%;text-align:center;" class="price">
+                <h1 class="pricingHeaders">Basic</h1>
+                <div class="priceMoney">
+                    $<b class="priceNumber">9</b>
+                    <br>monthly
+                </div>
+                <button class="buyButton" onclick="toggleActiveClass(2)">Buy It</button>
+
+                <div style="text-align: left; padding:10%;">
+                    <p><i>Everything in <b style="color:black">Free</b> including:</i></p><hr>
+                    <p>Access to create up to 10 separate ledgers</p><hr>
+                    <p>Major financial statements created quarterly</p><hr>
+                    <p>Statement of Financial Position</p>
+                    <hr>
+                    <p>Notifications</p>
+                    <hr>
+                    <p>Integration into Google Calendar</p>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3" style="float: left;">
+            <div id="divP3" style="width:100%; text-align:center;" class="price activePricing">
+                <h1 class="pricingHeaders">Premium</h1>
+                <div class="priceMoney">
+                    $<b class="priceNumber">24</b>
+                    <br>monthly
+                </div>
+                <button class="buyButton" onclick="toggleActiveClass(3)">Buy It</button>
+
+                <div style="text-align: left; padding:10%;">
+                    <p><i>Everything in <b style="color:black">Basic</b> including:</i></p><hr>
+                    <p>Access to Portal</p><hr>
+                    <p>View Baseline Financial Reports</p>
+                    <hr>
+                    <p>Statement of Financial Position</p>
+                    <hr>
+                    <p>Income Statement</p>
+                    <hr>
+                    <p>Cash Flow Statement</p>
+                    <hr>
+                    <p>Statement of Changes in Equity</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3" style="float: left;">
+            <div id="divP4" style="width:100%; text-align:center;" class="price">
+                <h1 class="pricingHeaders">Enterprise</h1>
+                <div class="priceMoney">
+                    $<b class="priceNumber">49</b>
+                    <br>monthly
+                </div>
+                <button class="buyButton" onclick="toggleActiveClass(4)">Buy It</button>
+
+                <div style="text-align: left; padding:10%;">
+                    <p><i>Everything in <b style="color:black">Premium</b> including:</i></p><hr>
+                    <p>24/7 access to support team via email or phone</p><hr>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
 
 
+
+<script src="js/pricing-toggle.js"></script>
 <script src="js/vendor/jquery-2.2.4.min.js"></script>
 <script src="js/slide-animation.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"

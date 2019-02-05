@@ -62,13 +62,26 @@
     <!-- modernizr JS
 		============================================ -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAzfPhj4cAMMPEimZDlGlvK5vgdB52l1co",
+        authDomain: "accuracy-dashboard.firebaseapp.com",
+        databaseURL: "https://accuracy-dashboard.firebaseio.com",
+        projectId: "accuracy-dashboard",
+        storageBucket: "accuracy-dashboard.appspot.com",
+        messagingSenderId: "1053745462291"
+      };
+      firebase.initializeApp(config);
+    </script>
 </head>
 
 <body>
 
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
-            
+
 			<div class="nalika-profile">
 				<div class="profile-dtl">
 					<a href="#"><img src="img/notification/4.jpg" alt="" /></a>
@@ -89,12 +102,12 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    
+
                 </div>
             </div>
         </div>
         <div class="header-advance-area">
-            
+
             <!-- Mobile Menu start -->
             <div class="mobile-menu-area">
                 <div class="container">
@@ -104,7 +117,7 @@
                                 <nav id="dropdown">
                                     <ul class="mobile-menu-nav">
                                         <li><a data-toggle="collapse" data-target="#Charts" href="#">Home <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
-                                            
+
                                         </li>
                                         <li><a data-toggle="collapse" data-target="#demo" href="#">Mailbox <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
                                             <ul id="demo" class="collapse dropdown-header-top">
@@ -116,8 +129,8 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        
-                                        
+
+
                                         <li><a data-toggle="collapse" data-target="#Chartsmob" href="#">Charts <span class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
                                             <ul id="Chartsmob" class="collapse dropdown-header-top">
                                                 <li><a href="bar-charts.html">Bar Charts</a>
@@ -422,7 +435,7 @@
                 </div>
             </div>
         </div>
-      
+
         <div class="product-sales-area mg-tb-30">
             <div class="container-fluid">
                 <div class="row">
@@ -476,7 +489,7 @@
                 </div>
             </div>
         </div>
-    
+
         <div class="calender-area mg-tb-30">
             <div class="container-fluid">
                 <div class="row">
@@ -553,6 +566,7 @@
     <!-- main JS
 		============================================ -->
     <script src="js/main.js"></script>
+    <script src="user-data.js"></script>
 </body>
 
 </html>

@@ -42,7 +42,7 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 
                 <!-- Logo of the navbar -->
                 <div class="col-3 logo">
-                    <a href="index.html">
+                    <a href="home.html">
                         <img id="logoNav" class="mx-auto" src="img/logo.png" alt="" style="padding: 10px; border-radius: 50%; background-color: white;">
                     </a>
                 </div>
@@ -65,11 +65,11 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
+                                <a class="nav-link" href="home.html">Home</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
+                                <a class="nav-link" href="Login-Signup/index.html" target="_blank">Portal</a>
                             </li>
 
                         </ul>
@@ -88,6 +88,83 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
             <font style="font-size:1.3em;"><b>Q</b></font>uestions</h1>
 
     </div>
+    <div class="container">
+        <button class="accordion">Where can I view my financial reports?
+        </button>
+        <div class="panel">
+          <p>You can view your financial information by clicking on the Portal tab
+              and signing in with your email and password.
+              After that, you will be navigated to your dashboard, where you can
+              easily view all figures and statements that you might need.</p>
+        </div>
+
+        <button class="accordion">I forgot my password, how can I log back in?</button>
+        <div class="panel">
+            <p>You can easily reset your password by clicking on “Forgot Password”
+                under the login page in the portal. From there, you will receive a reset
+                password link that you can use to set your password to something new.</p>
+        </div>
+
+        <button class="accordion">How can I upload financial transactions to be processed in the portal?</button>
+        <div class="panel">
+            <p>Simply click on “Upload Transaction”,
+                upload your PDF file of the transaction,
+                and manually enter the details of transaction, such as vendor,
+                amount paid, date, etc. This information will automatically be
+                synced to your dashboard and all information on your transaction
+                can be viewed at any time.
+            </p>
+        </div>
+
+        <button class="accordion">
+            How can I ensure that my data is protected and is secure?
+        </button>
+        <div class="panel">
+            <p>Accuracy utilizes novel encryption techniques
+                to ensure that your data will never get into the wrong hands.
+                Through Firebase and Google Cloud Encryption, data is protected
+                using the AES256 level encryption.
+            </p>
+        </div>
+
+        <button class="accordion">
+            How can I schedule an appointment with my financial consultant?
+        </button>
+        <div class="panel">
+            <p>Accuracy is committed to providing the best
+                possible service to you, 24/7. You can set a preferred
+                advisor and can book appointments online with the
+                interactive calendar in your portal. If your preferred
+                advisor isn’t available at the time you request, you can
+                book a different time, or can meet with another one of our
+                experienced wealth managers.
+            </p>
+        </div>
+
+        <button class="accordion">
+            How do I file taxes using Accuracy?
+        </button>
+        <div class="panel">
+            <p>The process of filing taxes is simple using our software.
+                You can easily download PDFs of important tax documents in your
+                financial portal, including your Schedule C, Form 1120, W9, etc.
+                You can also book online appointments with your financial advisor
+                at any time, and can optionally set a specific deadline when you want
+                all documents to be filed.
+            </p>
+        </div>
+
+        <button class="accordion">
+            My taxes were filed late by Accuracy, what do I do?
+        </button>
+        <div class="panel">
+            <p>We pride ourselves on our dedication to perfection,
+                and always do our best to ensure that your taxes are
+                handled on time. However, if by chance your taxes are
+                filed after the April deadline, Accuracy guarantees to pay the 5% late fee.
+            </p>
+        </div>
+    </div>
 </section>
 
 
@@ -102,7 +179,6 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
                     <font style="font-size: 2em;">Contact</font><br>Accuracy</h1>
                 <p style="color: white">contact.accuracy19@gmail.com</p>
             </div>
-            </ul>
         </div>
 
         <div id="contactUSForm" style=" padding: 20px 8vw; width: 50%; float: left; height: 100%;">
@@ -128,13 +204,25 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
                 <br><br><br>
             </form>
         </div>
-
-
     </div>
-
 </section>
 
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
 
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
 
 <script src="js/vendor/jquery-2.2.4.min.js"></script>
 <script src="js/slide-animation.js"></script>
