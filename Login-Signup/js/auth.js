@@ -13,7 +13,6 @@ if (firebase.auth().currentUser) {
 
 if (document.getElementById("sign_in_button") != null) {
   document.getElementById("sign_in_button").onclick =  function(){
-
     var username = document.getElementById("username_input").value;
     var password = document.getElementById("password_input").value;
 

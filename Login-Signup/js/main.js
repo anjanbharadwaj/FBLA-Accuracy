@@ -1,3 +1,36 @@
+
+function showForgotPass() {
+    const element = document.getElementById("forgotPassSection");
+    document.getElementById("fg").style.visibility="visible";
+    element.style.visibility = "visible";
+    element.classList.remove('bounceOutDown');
+    element.classList.add('bounceInUp');
+}
+
+function hideForgotPass() {
+    const element = document.getElementById("forgotPassSection");
+
+    function handleAnimationEnd() {
+        document.getElementById("fg").style.visibility="collapse";
+        element.style.visibility="collapse";
+        document.getElementById("emailFG").value = "";
+        element.removeEventListener('animationend', handleAnimationEnd);
+    }
+    element.addEventListener('animationend', handleAnimationEnd);
+
+    element.classList.remove('bounceInUp');
+    element.classList.add('bounceOutDown');
+
+}
+
+function resetPass() {
+    var email = document.getElementById("emailFG").value;
+    firebase.auth().sendPasswordResetEmail(email).catch(function(error) {
+        console.log(error.message);
+    });
+}
+
+
 /*
 (function ($) {
     "use strict";

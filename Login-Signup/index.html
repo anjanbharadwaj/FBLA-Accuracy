@@ -25,11 +25,13 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-
+	<link rel="stylesheet" type="text/css" href="../css/animatecss.css">
 
 <!--===============================================================================================-->
 <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
-<script>
+	<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+
+	<script>
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyAzfPhj4cAMMPEimZDlGlvK5vgdB52l1co",
@@ -40,20 +42,26 @@
     messagingSenderId: "1053745462291"
   };
   firebase.initializeApp(config);
+
+  firebase.auth().signOut().then(function() {
+      console.log("signed out");
+  }).catch(function(error) {
+      // An error happened.
+  });
 </script>
-<script src="js/auth.js"></script>
 
 </head>
 <body>
 
 	<div class="limiter">
 		<div class="container-login100" style="background-image: linear-gradient(#d30407, #ed9596)">
-			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
+			<div class="wrap-login100 p-l-110 p-r-110 p-t-20 p-b-30">
 				<form class="login100-form validate-form flex-sb flex-w">
-					<span class="login100-form-title p-b-53">
-						Sign In With
+					<span class="login100-form-title p-b-20">
+						<font style="font-size:2em; line-height:130%; color:black;">Accuracy</font><br>
+						Log In
 					</span>
-
+					<!--
 					<a href="#" class="btn-face m-b-20">
 						<i class="fa fa-facebook-official"></i>
 						Facebook
@@ -63,10 +71,10 @@
 						<img src="images/icons/icon-google.png" alt="GOOGLE">
 						Google
 					</a>
-
-					<div class="p-t-31 p-b-9">
+					-->
+					<div class="p-t-20 p-b-9">
 						<span class="txt1">
-							Username
+							Email
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "Username is required">
@@ -79,7 +87,7 @@
 							Password
 						</span>
 
-						<a href="#" class="txt2 bo1 m-l-5">
+						<a href="#" class="txt2 bo1 m-l-5" onclick="showForgotPass()">
 							Forgot?
 						</a>
 					</div>
@@ -90,17 +98,17 @@
 
 					<div class="container-login100-form-btn m-t-17">
 						<button type="button" class="login100-form-btn" id="sign_in_button">
-							Sign In
+							Log In
 						</button>
 					</div>
 
-					<div class="w-full text-center p-t-55">
+					<div class="w-full text-center p-t-20">
 						<span class="txt2">
 							Not a member?
 						</span>
 
 						<a href="signup.html" class="txt2 bo1">
-							Sign up now
+							Create account now
 						</a>
 					</div>
 				</form>
@@ -111,6 +119,23 @@
 
 	<div id="dropDownSelect1"></div>
 
+
+	<div class="forgotPass" id="fg">
+		<div id="forgotPassSection" class="animated">
+		<button id="closeButton" onclick="hideForgotPass()" style="position: relative; float: right;"><b>X</b></button>
+		<div style="position: relative; top: 50%; transform: translate(0, -50%);">
+			<h1>Account Recovery</h1>
+			<div id="emailareaFG" style="padding-top:5%; font-size: 25px;">
+				<label for="emailFG" style="display: inline-block;padding-right:15px;">Email: </label>
+				<input id="emailFG" type="text" style="padding: 5px; display:inline-block;">
+			</div>
+			<button onclick="resetPass()"
+					style="margin: 25px; padding: 20px; background-color: #d01d33; border-radius:10px;">
+				Send Reset Email</button>
+
+		</div>
+		</div>
+	</div>
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -128,8 +153,8 @@
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
 	<script src="../dashboard/user-data.js"></script>
-
 	<script src="js/auth.js"></script>
+
 
 
 </body>
