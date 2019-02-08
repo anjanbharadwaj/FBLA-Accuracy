@@ -1,20 +1,113 @@
-/*-----------------------------------------------------------------------------------
 
-    Template Name: Your template name 
-    Template URI: http://bootexperts.com
-    Description: This is html5 template
-    Author: BootExperts
-    Author URI: http://bootexperts.com
-    Version: 1.0
 
------------------------------------------------------------------------------------
-    
-    CSS INDEX
-    ===================
-	
-    1. Theme Default CSS (body, link color, section etc)
+.addStat * {
+	display: inline-block;
+	padding: 8px;
+	margin: 5px;
+}
 
------------------------------------------------------------------------------------*/
+.addStat input:focus, .addStat button:focus {
+	outline:none;
+}
+
+.addStat input {
+	width: 55px;
+}
+
+.addStat button {
+	background-color:black;
+	color:white;
+	border:none;
+	width: 30px;
+	height: 100%;
+	transition: all .2s ease-in-out;
+}
+
+.addStat button:hover {
+	transform: scale(1.2);
+}
+
+.addStat h1 {
+	color:white;
+    font-size: 20px;
+}
+
+.tableStat {
+	position:relative;
+	width: calc(70% + 16px);
+	left:-10px;
+	bottom: -10px;
+	height: 362px;
+	overflow:auto;
+}
+
+
+.tableStat table  {
+	border-collapse:collapse;
+}
+
+.tableStat table tr th, .tableStat table td {
+	border-bottom: 1px solid black;
+}
+
+@media only screen and (max-width:420px) {
+	.tableStat {
+		width: calc(100% + 16px) !important;
+	}
+
+    .addStat h1 {
+        font-size: 17px !important;
+    }
+
+    #assetsGtext {
+        font-size: 22px !important;
+    }
+
+    #libGtext, #expGtext {
+        font-size: 17px !important;
+    }
+
+
+
+
+
+    .product-sales-chart {
+        padding: 12px !important;
+    }
+}
+
+.buttonStat {
+	margin: 0 1.3vw;
+	border: none;
+	background-color: inherit;
+	color:white;
+	font-size: 20px;
+	font-weight:500;
+	border-radius:6px;
+	padding: 5px 7px;
+	user-select: none;
+}
+
+.buttonStat:focus {
+	outline:none;
+}
+
+.buttonStat:hover {
+	text-decoration: underline;
+}
+
+.buttonActive {
+	background-color: black;
+}
+
+
+
+
+
+
+
+
+
 
 /*----------------------------------------*/
 /*  1.  Theme default CSS
@@ -970,7 +1063,7 @@ ul.cus-product-sl-rp li h5{
 	color:#fff;
 }
 .pro-sl-hd span{
-	font-size:20px;
+	font-size:30px;
 	color:#fff;
 	text-transform: capitalize;
 } 

@@ -17,7 +17,7 @@
   transition: 0.4s;
 }
 
-.active, .accordion:hover {
+.activeFAQ, .accordion:hover {
   background-color: #ccc;
 }
 
@@ -29,7 +29,7 @@
   margin-left: 5px;
 }
 
-.active:after {
+.activeFAQ:after {
   content: "↓";
 }
 

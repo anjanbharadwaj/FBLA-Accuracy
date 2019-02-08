@@ -6,6 +6,7 @@ firebase.auth().signOut().then(function() {
 });
 
 
+
 if (firebase.auth().currentUser) {
   console.log(firebase.auth().currentUser.email);
 }
@@ -37,9 +38,8 @@ if (document.getElementById("create_user_button") != null) {
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-    transferUser && transferUser(user, function() {
+      sessionStorage.setItem("uid", user.uid);
       window.location.href = "../dashboard/index.html";
-    });
   } else {
 
   }
