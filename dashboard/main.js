@@ -1,35 +1,23 @@
-function retrieve_assets() {
+function retrieve_data() {
   var database = firebase.database();
   var userId = "uid" // will be initialized with UID later firebase.auth().currentUser.uid;
   
-  firebase.database().ref('/users/' + userId + '/graphs/assets').once('value').then(function(snapshot) {
-    var date = (snapshot.val() && snapshot.val().date);
-    var value = (snapshot.val() && snapshot.val().value);
+  firebase.database().ref('/users/' + userId + '/graphs/' + "expenses").once('value').then(function(snapshot) {
     
-    console.log(date)
-    console.log(value)
+    
+    var date = (snapshot.val() && snapshot.val().date);
+    
+    snapshot.once('value').then(function(snapshot_2)) {
+      
+      var value = (snapshot_2.val() && snapshot_2.val().value);
+
+      console.log(date + " " + value)
+    }
+    
   });
   
-  return [date, value]
+  return 0
 }
-
-function retrieve_expenses() {
-  var database = firebase.database();
-  var userId = "uid" // will be initialized with UID later firebase.auth().currentUser.uid;
-  
-  firebase.database().ref('/users/' + userId + '/expenses/assets').once('value').then(function(snapshot) {
-    var date = (snapshot.val() && snapshot.val().date);
-    var value = (snapshot.val() && snapshot.val().value);
-    
-    console.log(date)
-    console.log(value)
-  });
-  
-  return [date, value]
-}
-
-
-
 
 
 function toggleDisplay(statID, b) {
