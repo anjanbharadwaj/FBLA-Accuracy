@@ -61,7 +61,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- modernizr JS
 		============================================ -->
-
+    <link rel="stylesheet" href="inputFields.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
     <script>
@@ -531,6 +531,463 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            
+            <div class="container-fluid" style="padding: 15px 15px;">
+                <div class="row ">
+                    <div class="col-md-8 col-xs-12">
+                        <div style="border: 2px solid #eae8e8; border-radius:10px; height: 362px; overflow: auto;">
+                            <div>
+                                <h1 id="employeeHeader" style="margin: 0 auto; padding: 13px 0.75rem; font-size:35px; border-bottom: 1px solid #dce1e4;">
+                                    <span>
+                                        Employees
+                                        <span class="badge" style="height:100%; margin-left:10px;">
+                                            10
+                                        </span>
+                                    </span>
+                                    <button id="addemployeeB" class="btn">
+                                        ADD MORE
+                                    </button>
+                                </h1>
+                            </div>
+                            <div id="memberSectionD">
+                                <div class="memberSection">
+                                    <p>
+                                        <span><strong>John Doe&emsp;</strong></span>
+                                        <span><strong>(408) 123-1233</strong></span>
+                                        <br>
+                                        john@gmail.com
+                                    </p>
+                                </div>
+                                <div class="memberSection">
+                                    <p>
+                                        <span><strong>John Doe&emsp;</strong></span>
+                                        <span><strong>(408) 123-1233</strong></span>
+                                        <br>
+                                        john@gmail.com
+                                    </p>
+                                </div>
+                                <div class="memberSection">
+                                    <p>
+                                        <span><strong>John Doe&emsp;</strong></span>
+                                        <span><strong>(408) 123-1233</strong></span>
+                                        <br>
+                                        john@gmail.com
+                                    </p>
+                                </div>
+                                <div class="memberSection">
+                                    <p>
+                                        <span><strong>John Doe&emsp;</strong></span>
+                                        <span><strong>(408) 123-1233</strong></span>
+                                        <br>
+                                        john@gmail.com
+                                    </p>
+                                </div>
+                                <div class="memberSection">
+                                    <p>
+                                        <span><strong>John Doe&emsp;</strong></span>
+                                        <span><strong>(408) 123-1233</strong></span>
+                                        <br>
+                                        john@gmail.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-md-offset-1 col-xs-12">
+                        <div style="overflow:auto;">
+                            <div>
+                                <h1>
+                                    pdf1
+                                    <button data-toggle="tooltip" data-placement="left" title="Download Report" class="btn"
+                                    style="background-color: #152036; color:white;">
+                                        <i class="icon nalika-download"></i>
+                                    </button>
+
+                                </h1>
+
+                            </div>
+                            <div>
+                                dif2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid" style="padding: 35px 15px;">
+                <h1 style="text-align:center; font-size: 60px;" id="gLedger">General Ledger</h1><br>
+                <div>
+                    <div style="background-color:#d04646; padding: 10px 10px 20px 10px; border-radius: 8px 8px 0 0;">
+                        <h3 style="text-align:center;">Add to Account</h3>
+                        <div class="Wrapper" id="accNW" style="display: inline-block; width: 45%;">
+                            <div class="Input">
+                                <input type="text" id="accName" class="Input-text" placeholder="Account name">
+                                <label for="accName" class="Input-label">Account Name</label>
+                            </div>
+                        </div>
+                        <div class="Wrapper" id="creditW" style="display: inline-block; width: 20%;">
+                            <div class="Input">
+                                <input type="text" id="credit" class="Input-text" placeholder="Credit">
+                                <label for="credit" class="Input-label">Credit</label>
+                            </div>
+                        </div>
+                        <div class="Wrapper" id="debitW" style="display: inline-block; width: 20%;">
+                            <div class="Input">
+                                <input type="text" id="debit" class="Input-text" placeholder="Debit">
+                                <label for="debit" class="Input-label">Debit</label>
+                            </div>
+                        </div>
+                        <button id="addLedgerB" class="btn" >Add</button>
+                    </div>
+                </div>
+                <div style="height: 360px; overflow-y: auto; overflow-x: hidden; border-radius: 0 0 8px 8px;">
+                    <div class="ledgerSection">
+                        <div class="ledgerTitle">
+                            <h1>Account 1</h1>
+                        </div>
+                        <div class="ledgerNum row">
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <p>Credit</p>
+                            </div>
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <p>Debit</p>
+                            </div>
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <p>Date</p>
+                            </div>
+                        </div>
+                        <div class="ledgerData">
+                            <div class="ledgerValues row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>1-2-19</p>
+                                </div>
+                            </div>
+                            <div class="ledgerValues row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>1-2-19</p>
+                                </div>
+                            </div>
+                            <div class="ledgerValues row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>1-2-19</p>
+                                </div>
+                            </div>
+                            <div class="ledgerValues row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>1-2-19</p>
+                                </div>
+                            </div>
+                            <div class="ledgerValues row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>1-2-19</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ledgerTotal">
+                            <div class="row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p><strong>Total</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ledgerSection">
+                        <div class="ledgerTitle">
+                            <h1>Account 1</h1>
+                        </div>
+                        <div class="ledgerNum row">
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <p>Credit</p>
+                            </div>
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <p>Debit</p>
+                            </div>
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <p>Date</p>
+                            </div>
+                        </div>
+                        <div class="ledgerData">
+                            <div class="ledgerValues row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>1-2-19</p>
+                                </div>
+                            </div>
+                            <div class="ledgerValues row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>1-2-19</p>
+                                </div>
+                            </div>
+                            <div class="ledgerValues row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>1-2-19</p>
+                                </div>
+                            </div>
+                            <div class="ledgerValues row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>1-2-19</p>
+                                </div>
+                            </div>
+                            <div class="ledgerValues row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>1-2-19</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ledgerTotal">
+                            <div class="row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p><strong>Total</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ledgerSection">
+                        <div class="ledgerTitle">
+                            <h1>Account 1</h1>
+                        </div>
+                        <div class="ledgerNum row">
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <p>Credit</p>
+                            </div>
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <p>Debit</p>
+                            </div>
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <p>Date</p>
+                            </div>
+                        </div>
+                        <div class="ledgerData">
+                            <div class="ledgerValues row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>1-2-19</p>
+                                </div>
+                            </div>
+                            <div class="ledgerValues row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>1-2-19</p>
+                                </div>
+                            </div>
+                            <div class="ledgerValues row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>1-2-19</p>
+                                </div>
+                            </div>
+                            <div class="ledgerValues row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>1-2-19</p>
+                                </div>
+                            </div>
+                            <div class="ledgerValues row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>1-2-19</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ledgerTotal">
+                            <div class="row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p><strong>Total</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ledgerSection">
+                        <div class="ledgerTitle">
+                            <h1>Account 1</h1>
+                        </div>
+                        <div class="ledgerNum row">
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <p>Credit</p>
+                            </div>
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <p>Debit</p>
+                            </div>
+                            <div class="col-md-4 col-xs-4 text-center">
+                                <p>Date</p>
+                            </div>
+                        </div>
+                        <div class="ledgerData">
+                            <div class="ledgerValues row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>1-2-19</p>
+                                </div>
+                            </div>
+                            <div class="ledgerValues row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>1-2-19</p>
+                                </div>
+                            </div>
+                            <div class="ledgerValues row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>1-2-19</p>
+                                </div>
+                            </div>
+                            <div class="ledgerValues row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>1-2-19</p>
+                                </div>
+                            </div>
+                            <div class="ledgerValues row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>1-2-19</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ledgerTotal">
+                            <div class="row">
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p>0</p>
+                                </div>
+                                <div class="col-md-4 col-xs-4">
+                                    <p><strong>Total</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
