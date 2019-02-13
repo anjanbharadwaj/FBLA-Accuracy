@@ -17,6 +17,68 @@ document.getElementById("button_asset").onclick = function() {
   
 }
 
+document.getElementById("button_expense").onclick = function() {
+  var asset_value = document.getElementById("expense_input").value
+
+  //get the current date
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth() + 1; //January is 0!
+  var yyyy = today.getFullYear();
+  
+  var full_date = mm + "-" + dd + "-" + yyyy
+  var userId = "uid"
+
+  //push to firebase
+  firebase.database().ref('users/' + userId + '/graphs/expenses/' + full_date).set({
+    value: asset_value
+  });
+  
+}
+
+document.getElementById("button_liability").onclick = function() {
+  var asset_value = document.getElementById("liability_input").value
+
+  //get the current date
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth() + 1; //January is 0!
+  var yyyy = today.getFullYear();
+  
+  var full_date = mm + "-" + dd + "-" + yyyy
+  var userId = "uid"
+
+  //push to firebase
+  firebase.database().ref('users/' + userId + '/graphs/liabilities/' + full_date).set({
+    value: asset_value
+  });
+  
+}
+
+document.getElementById("addLedgerB").onclick = function() {
+  var account_name = document.getElementById("accName").value
+  var credit = document.getElementById("credit").value 
+  var debit = document.getElementById("debit").value 
+
+  //get the current date
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth() + 1; //January is 0!
+  var yyyy = today.getFullYear();
+  
+  var full_date = mm + "-" + dd + "-" + yyyy
+  var userId = "uid"
+
+  //push to firebase
+  firebase.database().ref('users/' + userId + '/table/ledger/' + full_date).set({
+    credit: credit,
+    date: full_date,
+    debit: debit,
+    name: account_name
+  });
+  
+}
+
 class GraphData {
   constructor(date, value) {
     this.date = date;
