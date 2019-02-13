@@ -41,6 +41,10 @@
   transition: max-height 0.2s ease-out;
 }
 
+.panel p {
+    margin-top: 1rem;
+}
+
 
 
 
@@ -145,7 +149,7 @@
 }
 
 .aboutInfo {
-    font-size: 2em;
+    font-size: 1.2em;
 }
 
 
