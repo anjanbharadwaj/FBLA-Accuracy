@@ -1,3 +1,23 @@
+function retrieve_data() {
+  var database = firebase.database();
+  var userId = "uid" // will be initialized with UID later firebase.auth().currentUser.uid;
+  
+  firebase.database().ref('/users/' + userId + '/graphs/' + "expenses").once('value').then(function(snapshot) {
+    
+    
+    var date = (snapshot.val() && snapshot.val().date);
+    
+    snapshot.once('value').then(function(snapshot_2)) {
+      
+      var value = (snapshot_2.val() && snapshot_2.val().value);
+
+      console.log(date + " " + value)
+    }
+    
+  });
+  
+  return 0
+}
 
 
 function toggleDisplay(statID, b) {
