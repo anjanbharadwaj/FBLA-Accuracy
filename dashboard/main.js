@@ -1,3 +1,22 @@
+document.getElementById("button_asset").onclick = function() {
+  var asset_value = document.getElementById("asset_input").value
+
+  //get the current date
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth() + 1; //January is 0!
+  var yyyy = today.getFullYear();
+  
+  var full_date = mm + "-" + dd + "-" + yyyy
+  var userId = "uid"
+
+  //push to firebase
+  firebase.database().ref('users/' + userId + '/graphs/assets/' + full_date).set({
+    value: asset_value
+  });
+  
+}
+
 class GraphData {
   constructor(date, value) {
     this.date = date;
