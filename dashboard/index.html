@@ -63,6 +63,8 @@
 		============================================ -->
     <link rel="stylesheet" href="inputFields.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/animatecss.css">
+
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
     <script>
       // Initialize Firebase
@@ -406,18 +408,41 @@
             </div>
             
             <div class="container-fluid" style="padding: 15px 15px;">
-                <div class="row ">
+                <div class="row" style="position:relative;">
+                    <div class="addEmployee" id="addE">
+                        <div id="addEmployeeSection" class="animated">
+                            <button id="closeButton" onclick="hideAddEmployee()" style="position: relative; float: right; background-color:transparent; border:none;"><b>X</b></button>
+                            <div style="position: relative; top: 50%; transform: translate(0, -50%);">
+                                <h1>Add Employee</h1>
+                                <div id="namearea" style="padding-top:5%; font-size: 25px;">
+                                    <label for="nameE" style="display: inline-block;padding-right:15px;">Name: </label>
+                                    <input id="nameE" type="text" style="padding: 5px; display:inline-block;">
+                                </div>
+                                <div id="emailarea" style="padding-top:5%; font-size: 25px;">
+                                    <label for="emailE" style="display: inline-block;padding-right:15px;">Email: </label>
+                                    <input id="emailE" type="text" style="padding: 5px; display:inline-block;">
+                                </div>
+                                <div id="phonearea" style="padding-top:5%; font-size: 25px;">
+                                    <label for="phoneE" style="display: inline-block;padding-right:15px;">Phone: </label>
+                                    <input id="phoneE" type="text" style="padding: 5px; display:inline-block;">
+                                </div>
+                                <button id="addEButton" onclick="addEmployee()">
+                                    <strong>Add</strong></button>
+
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-md-8 col-xs-12">
                         <div style="border: 2px solid #eae8e8; border-radius:10px; height: 362px; overflow: auto;">
                             <div>
                                 <h1 id="employeeHeader" style="margin: 0 auto; padding: 13px 0.75rem; font-size:35px; border-bottom: 1px solid #dce1e4;">
                                     <span>
                                         Employees
-                                        <span class="badge" style="height:100%; margin-left:10px;">
+                                        <span class="badge" id="numEmployees" style="height:100%; margin-left:10px;">
                                             10
                                         </span>
                                     </span>
-                                    <button id="addemployeeB" class="btn">
+                                    <button id="addemployeeB" class="btn" onclick="showAddEmployee()">
                                         ADD MORE
                                     </button>
                                 </h1>
@@ -877,6 +902,8 @@
         </div>
 
    </div>
+
+
     <!-- jquery
 		============================================ -->
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
@@ -932,6 +959,7 @@
     <script src="js/main.js"></script>
     <script src="main.js"></script>
     <script src="user-data.js"></script>
+    <script src="firebase.js"></script>
 </body>
 
 </html>
