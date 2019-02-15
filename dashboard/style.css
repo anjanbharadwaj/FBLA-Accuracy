@@ -31,22 +31,38 @@
     border:none;
 }
 
-#addEButton:focus {
+#addEButton:focus, #closeButton:focus, #addemployeeB:focus{
     outline:none;
 }
+#addEButton:hover, #closeButton:hover, #addemployeeB:hover {
+    cursor:pointer;
+}
 
-@media only screen and (max-width:420px) {
+
+@media only screen and (max-width:450px) {
     .addEmployee {
         width: 90vw !important;
         transform: translate(-50%, 0%) !important;
         top: 0 !important;
-        height: 350px !important;
+        height: 300px !important;
     }
 
     #namearea, #emailarea, #phonearea {
         font-size: 5vw !important;
     }
+}
 
+@media  only screen and (max-width:1000px) and (min-width:450px) {
+    .addEmployee {
+        width: 90vw !important;
+        transform: translate(-50%, 0%) !important;
+        top: 0 !important;
+        height: 400px !important;
+    }
+
+    #e1 {
+        padding-top:25px;
+    }
 }
 
 

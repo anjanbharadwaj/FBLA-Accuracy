@@ -166,3 +166,29 @@ function retrieve_graph_data(data_to_retrieive) {
 
     return new GraphData(date_list, value_list)
 }
+
+
+
+
+function displayEmployees(employees) {
+    document.getElementById("numEmployees").innerText = employees.length;
+    document.getElementById("memberSectionD").innerHTML = "";
+    employees.forEach((em) =>  {
+        var name = em.name;
+        var email = em.email;
+        var phone = em.phone;
+        phone = "("+phone.substring(0, 3)+") "+phone.substring(3,6)+"-"+phone.substring(6);
+        document.getElementById("memberSectionD").innerHTML +=
+            "<div class=\"memberSection\">\n" +
+            "<p>" +
+            "<span><strong>"+name+"&emsp;</strong></span>" +
+            "<span><strong>" + phone + "</strong></span>" +
+            "<br>" +
+            email +
+            "</p></div>";
+    });
+}
+
+
+var em = new Employee("j@", "john", "4085154321");
+displayEmployees([em, em]);
