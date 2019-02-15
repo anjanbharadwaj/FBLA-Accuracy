@@ -189,6 +189,140 @@ function displayEmployees(employees) {
     });
 }
 
+function displayLedger(ledgers) {
+
+    function compareEm(a,b) {
+        if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
+        else if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+        else {
+            var aA = {
+                m: parseInt(a.date.substring(0, a.date.indexOf("-"))),
+                d: parseInt(a.date.substring(a.date.indexOf("-") + 1, a.date.indexOf("-", a.date.indexOf("-") + 1))),
+                y: parseInt(a.date.substring(a.date.lastIndexOf("-") + 1))
+            };
+            var bB = {
+                m: parseInt(b.date.substring(0, b.date.indexOf("-"))),
+                d: parseInt(b.date.substring(b.date.indexOf("-") + 1, b.date.indexOf("-", b.date.indexOf("-") + 1))),
+                y: parseInt(b.date.substring(b.date.lastIndexOf("-") + 1))
+            };
+
+            if (aA.y > bB.y) return 1;
+            else if (bB.y > aA.y) return -1;
+            else {
+                if (aA.m > bB.m) return 1;
+                else if (bB.m > aA.m) return -1;
+                else {
+                    if (aA.d > bB.d) return 1;
+                    else if (bB.d > aA.d) return -1;
+                    else return 0;
+                }
+            }
+        }
+    }
+
+    ledgers.sort(compareEm);
+
+    document.getElementById("ledgerDisplay").innerHTML = "";
+
+    var cAcc = "";
+    var totalC = 0;
+    var totalD = 0;
+    var sectionS = "";
+
+    ledgers.forEach((le) =>{
+        if (cAcc.toLowerCase() != le.name.toLowerCase()) {
+            if (cAcc != "") {
+                sectionS += "" +
+                    "<div class=\"ledgerTotal\">\n" +
+                    "<div class=\"row\">\n" +
+                    "<div class=\"col-md-4 col-xs-4\">\n" +
+                    "<p>"+totalC+"</p>\n" +
+                    "</div>\n" +
+                    "<div class=\"col-md-4 col-xs-4\">\n" +
+                    "<p>"+totalD+"</p>\n" +
+                    "</div>\n" +
+                    "<div class=\"col-md-4 col-xs-4\">\n" +
+                    "<p><strong>Total</strong></p>\n" +
+                    "</div>\n" +
+                    "</div>\n" +
+                    "</div>" +
+                    "</div>";
+                totalC = 0; totalD = 0;
+            }
+
+            sectionS += "" +
+                "<div class='ledgerSection'>"+
+                "<div class='ledgerTitle'>"+
+                "<h1>"+le.name+"</h1>"+
+                "</div>"+
+                "<div class='ledgerNum row'>" +
+                "<div class=\"col-md-4 col-xs-4 text-center\">" +
+                "<p>Credit</p>" +
+                "</div>" +
+                "<div class=\"col-md-4 col-xs-4 text-center\">" +
+                "<p>Debit</p>" +
+                "</div>"+
+                "<div class=\"col-md-4 col-xs-4 text-center\">" +
+                "<p>Date</p></div></div>";
+
+            cAcc = le.name;
+        }
+
+        var ld = getDate(le);
+        var leDate = ld.m + "-" + ld.d + "-"+ld.y;
+        sectionS += "" +
+            "<div class=\"ledgerData\">\n" +
+            "<div class=\"ledgerValues row\">\n" +
+            " <div class=\"col-md-4 col-xs-4\">\n" +
+            "<p>"+le.credit+"</p>\n" +
+            "</div>\n" +
+            "<div class=\"col-md-4 col-xs-4\">\n" +
+            "<p>"+le.debit+"</p>\n" +
+            "</div>\n" +
+            "<div class=\"col-md-4 col-xs-4\">\n" +
+            "<p>"+leDate+"</p>\n" +
+            "</div></div></div>";
+
+    });
+    document.getElementById("ledgerDisplay").innerHTML += sectionS;
+
+}
+
+
+function getDate(dString) {
+     return {
+        m:parseInt(dString.date.substring(0, dString.date.indexOf("-"))),
+        d: parseInt(dString.date.substring(dString.date.indexOf("-")+1,
+            dString.date.indexOf("-",dString.date.indexOf("-")+1))),
+        y:parseInt(dString.date.substring(dString.date.lastIndexOf("-")+1))
+    };
+}
+
+function compareYears(a,b) {
+    var aA = getDate(a.date);
+    var bB = getDate(b.date);
+
+
+    if (aA.y > bB.y) return 1;
+    else if (bB.y > aA.y) return -1;
+    else {
+        if (aA.m > bB.m) return 1;
+        else if (bB.m > aA.m) return -1;
+        else {
+            if (aA.d > bB.d) return 1;
+            else if (bB.d > aA.d) return -1;
+            else return 0;
+        }
+    }
+
+}
 
 var em = new Employee("j@", "john", "4085154321");
 displayEmployees([em, em]);
+
+var l1 = new Ledger_Item("B", "01-07-19", 100, 1);
+var l2 = new Ledger_Item("b", "1-7-19", 1, 1);
+var l3 = new Ledger_Item("c", "1-3-19", 0, 1);
+
+
+displayLedger([l1, l2, l1, l3]);
