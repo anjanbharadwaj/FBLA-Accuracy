@@ -68,4 +68,21 @@ function addEmployee() {
 
 
     }
+    
+    
+    // push employee to firebase
+    
+    var userId = "uid"
+    
+    firebase.database().ref('users/' + userId + '/list/').child("employees").once("value").then(function(snapshot) {
+      //console.log("there are " + snapshot.numChildren() + " children")
+      //push to firebase
+      firebase.database().ref('users/' + userId + '/list/employees/' + "em" + (snapshot.numChildren() + 1)).set({
+          email: email,
+          name: name,
+          phone: phone
+      });
+    });
+    
+    
 }

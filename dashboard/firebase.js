@@ -1,3 +1,4 @@
+
 document.getElementById("button_asset").onclick = function() {
     var asset_value = document.getElementById("asset_input").value
 
@@ -11,8 +12,13 @@ document.getElementById("button_asset").onclick = function() {
     var userId = "uid"
 
     //push to firebase
-    firebase.database().ref('users/' + userId + '/graphs/assets/' + full_date).set({
-        value: asset_value
+    
+    firebase.database().ref('users/' + userId + '/graphs/').child("assets").once("value").then(function(snapshot) {
+      //console.log("there are " + snapshot.numChildren() + " children")
+      //push to firebase
+      firebase.database().ref('users/' + userId + '/graphs/assets/' + "entry" + (snapshot.numChildren() + 1)).set({
+          value: asset_value
+      });
     });
 
 }
@@ -30,8 +36,13 @@ document.getElementById("button_expense").onclick = function() {
     var userId = "uid"
 
     //push to firebase
-    firebase.database().ref('users/' + userId + '/graphs/expenses/' + full_date).set({
-        value: asset_value
+    
+    firebase.database().ref('users/' + userId + '/graphs/').child("expenses").once("value").then(function(snapshot) {
+      //console.log("there are " + snapshot.numChildren() + " children")
+      //push to firebase
+      firebase.database().ref('users/' + userId + '/graphs/expenses/' + "entry" + (snapshot.numChildren() + 1)).set({
+          value: asset_value
+      });
     });
 
 }
@@ -49,8 +60,14 @@ document.getElementById("button_liability").onclick = function() {
     var userId = "uid"
 
     //push to firebase
-    firebase.database().ref('users/' + userId + '/graphs/liabilities/' + full_date).set({
-        value: asset_value
+
+    
+    firebase.database().ref('users/' + userId + '/graphs/').child("liabilities").once("value").then(function(snapshot) {
+      //console.log("there are " + snapshot.numChildren() + " children")
+      //push to firebase
+      firebase.database().ref('users/' + userId + '/graphs/liabilities/' + "entry" + (snapshot.numChildren() + 1)).set({
+          value: asset_value
+      });
     });
 
 }
