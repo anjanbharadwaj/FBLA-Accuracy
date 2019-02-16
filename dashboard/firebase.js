@@ -68,13 +68,16 @@ document.getElementById("addLedgerB").onclick = function() {
 
     var full_date = mm + "-" + dd + "-" + yyyy
     var userId = "uid"
-
-    //push to firebase
-    firebase.database().ref('users/' + userId + '/table/ledger/' + full_date).set({
-        credit: credit,
-        date: full_date,
-        debit: debit,
-        name: account_name
+    
+    firebase.database().ref('users/' + userId + '/table/').child("ledger").once("value").then(function(snapshot) {
+      //console.log("there are " + snapshot.numChildren() + " children")
+      //push to firebase
+      firebase.database().ref('users/' + userId + '/table/ledger/' + "entry" + (snapshot.numChildren() + 1)).set({
+          credit: credit,
+          date: full_date,
+          debit: debit,
+          name: account_name
+      });
     });
 
 }
