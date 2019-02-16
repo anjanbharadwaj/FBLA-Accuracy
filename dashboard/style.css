@@ -277,8 +277,17 @@
 	width: calc(70% + 16px);
 	left:-10px;
 	bottom: -10px;
-	height: 362px;
+	height: 360px;
 	overflow:auto;
+}
+
+.totalGraph {
+    height:30px;
+    position:relative;
+    bottom:-13px;
+    padding-bottom:0;
+    margin-bottom:0;
+    font-size:18px;
 }
 
 
@@ -288,10 +297,14 @@
 
 .tableStat table tr th, .tableStat table td {
 	border-bottom: 1px solid black;
+    font-size: 13px;
 }
 
 @media only screen and (max-width:420px) {
-	.tableStat {
+    .tableStat table tr th, .tableStat table td {
+        font-size:10px !important;
+    }
+    .tableStat {
 		width: calc(100% + 16px) !important;
 	}
 

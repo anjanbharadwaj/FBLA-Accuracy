@@ -288,6 +288,34 @@ function displayLedger(ledgers) {
 
 }
 
+function displayGraphs(type, values) {
+    var table = document.getElementById(type+"Gvalues");
+    table.innerHTML = "";
+
+    values.sort(compareYears);
+    rePlot(type, getGraphValues(values));
+    var totalvalue= 0;
+    values.forEach((val)=>{
+        var d = getDate(val);
+        var date = d.m+"-"+d.d+"-"+d.y;
+        table.innerHTML += "<tr><td>"+val.value + "</td><td>"+date+"</td></tr>";
+        totalvalue += parseInt(val.value);
+    });
+    document.getElementById(type+"TotalGD").innerText = ""+totalvalue;
+}
+
+
+function getGraphValues(val) {
+    var newVal =[];
+
+    var c = 0;
+    val.forEach((v)=>{
+        newVal.push([c, v.value]);
+        c++;
+    });
+    console.log(newVal);
+    return newVal;
+}
 
 function getDate(dString) {
      return {
@@ -299,8 +327,8 @@ function getDate(dString) {
 }
 
 function compareYears(a,b) {
-    var aA = getDate(a.date);
-    var bB = getDate(b.date);
+    var aA = getDate(a);
+    var bB = getDate(b);
 
 
     if (aA.y > bB.y) return 1;
@@ -326,3 +354,20 @@ var l3 = new Ledger_Item("c", "1-3-19", 0, 1);
 
 
 displayLedger([l1, l2, l1, l3]);
+
+var g1 = new GraphData("1-5-19", 100);
+var g2 = new GraphData("1-5-19", 110);
+var g4 = new GraphData("1-7-19", 100);
+var g5 = new GraphData("2-7-19", 100);
+var g6 = new GraphData("1-7-18", 100);
+var g7 = new GraphData("1-5-11", 100);
+var g8 = new GraphData("2-2-19", 100);
+var g9 = new GraphData("11-71-19", 100);
+var g10 = new GraphData("1-74-19", 100);
+var g11 = new GraphData("1-71-19", 100);
+var g12 = new GraphData("11-7-19", 100);
+var g13 = new GraphData("1-7-129", 100);
+
+displayGraphs("assets", [g1, g2, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13]);
+displayGraphs("liabilities", [g1, g2, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13]);
+displayGraphs("expenses", [g1, g2, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13]);
