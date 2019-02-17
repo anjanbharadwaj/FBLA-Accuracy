@@ -23,6 +23,11 @@
     visibility: collapse;
 }
 
+#addEmployeeSection input {
+    border:none;
+}
+
+
 #addEButton {
     margin: 25px;
     padding: 10px 20px;
@@ -31,7 +36,8 @@
     border:none;
 }
 
-#addEButton:focus, #closeButton:focus, #addemployeeB:focus{
+#addEButton:focus, #closeButton:focus, #addemployeeB:focus, #addEmployeeSection input:focus
+{
     outline:none;
 }
 #addEButton:hover, #closeButton:hover, #addemployeeB:hover {

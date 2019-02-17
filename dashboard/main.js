@@ -44,8 +44,8 @@ function hideAddEmployee() {
 
 function addEmployee() {
     var email = document.getElementById("emailE").value;
-    var phone = document.getElementById("nameE").value;
-    var name = document.getElementById("phoneE").value;
+    var phone = document.getElementById("phoneE").value;
+    var name = document.getElementById("nameE").value;
 
 
     if (email == "" || phone == "" || name == "") {
@@ -56,6 +56,20 @@ function addEmployee() {
             document.getElementById("addEButton").innerHTML = "<strong>Add</strong>";
         }, 1000);
     } else {
+        var userId = "uid";
+
+        new Promise(resolve => {
+            firebase.database().ref('users/' + userId + '/list/').child("employees").once("value").then(function(snapshot) {
+                //console.log("there are " + snapshot.numChildren() + " children")
+                //push to firebase
+                firebase.database().ref('users/' + userId + '/list/employees/' + "em" + (snapshot.numChildren() + 1)).set({
+                    email: email,
+                    name: name,
+                    phone: phone
+                });
+                resolve();
+            });
+        }).then((res)=>{refreshEmployees()});
         document.getElementById("emailE").value = "";
         document.getElementById("phoneE").value = "";
         document.getElementById("nameE").value = "";
@@ -70,19 +84,8 @@ function addEmployee() {
     }
     
     
-    // push employee to firebase
-    
-    var userId = "uid"
-    
-    firebase.database().ref('users/' + userId + '/list/').child("employees").once("value").then(function(snapshot) {
-      //console.log("there are " + snapshot.numChildren() + " children")
-      //push to firebase
-      firebase.database().ref('users/' + userId + '/list/employees/' + "em" + (snapshot.numChildren() + 1)).set({
-          email: email,
-          name: name,
-          phone: phone
-      });
-    });
+
+
     
     
 }

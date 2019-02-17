@@ -5,7 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/firebase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/js/flot/flot-active.js" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/js/flot/flot-active.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/style.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,27 +22,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dashboard/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="306" column="13" lean-forward="true" selection-start-line="306" selection-start-column="13" selection-end-line="306" selection-end-column="13" />
+            <state relative-caret-position="500">
+              <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dashboard/js/flot/flot-active.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
-              <folding>
-                <element signature="e#14#368#0" />
-                <element signature="e#14#3408#0" />
-                <element signature="e#59#393#0" />
-                <element signature="e#1117#1232#0" />
-                <element signature="e#1346#1619#0" />
-                <element signature="e#1805#2006#0" />
-                <element signature="e#2129#2450#0" />
-                <element signature="e#2632#2836#0" />
-              </folding>
+            <state relative-caret-position="168">
+              <caret line="121" selection-start-line="121" selection-end-line="121" />
             </state>
           </provider>
         </entry>
@@ -50,11 +40,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dashboard/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="244" column="21" selection-start-line="244" selection-start-column="21" selection-end-line="244" selection-end-column="21" />
+            <state relative-caret-position="436">
+              <caret line="249" column="78" selection-start-line="249" selection-start-column="63" selection-end-line="249" selection-end-column="78" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -77,20 +66,33 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dashboard/firebase.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="306" lean-forward="true" selection-start-line="306" selection-end-line="306" />
+            <state relative-caret-position="25">
+              <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
               <folding>
                 <element signature="n#!!block;n#retrieve_ledger#0" />
                 <element signature="n#!!block;n#retrieve_employees#0" />
-                <element signature="n#!!block;n#retrieve_graph_data#0" />
                 <element signature="n#!!block;n#displayEmployees#0" />
                 <element signature="e#48#54#1" expanded="true" />
+                <element signature="n#!!block;n#refreshLedger#0" />
                 <element signature="n#!!block;n#displayLedger#0" />
                 <element signature="n#!!block;n#compareEm#0;n#!!block;n#displayLedger#0" />
+                <element signature="n#!!block;n#refreshLedger#0" />
+                <element signature="n#!!block;n#getGraphValues#0" />
+                <element signature="n#!!block;n#getDate#0" />
+                <element signature="n#!!block;n#compareYears#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dashboard/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="62" column="24" lean-forward="true" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -136,6 +138,8 @@
       <find>forgot</find>
       <find>addemployeeB</find>
       <find>lib</find>
+      <find>close</find>
+      <find>uid</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -171,10 +175,10 @@
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/dashboard/inputFields.css" />
         <option value="$PROJECT_DIR$/dashboard/main.js" />
-        <option value="$PROJECT_DIR$/dashboard/index.html" />
         <option value="$PROJECT_DIR$/dashboard/style.css" />
-        <option value="$PROJECT_DIR$/dashboard/firebase.js" />
+        <option value="$PROJECT_DIR$/dashboard/index.html" />
         <option value="$PROJECT_DIR$/dashboard/js/flot/flot-active.js" />
+        <option value="$PROJECT_DIR$/dashboard/firebase.js" />
       </list>
     </option>
   </component>
@@ -189,7 +193,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,6 +204,19 @@
               <item name="FBLAWebsiteDesign2019" type="b2602c69:ProjectViewProjectNode" />
               <item name="FBLAWebsiteDesign2019" type="462c0819:PsiDirectoryNode" />
               <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FBLAWebsiteDesign2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FBLAWebsiteDesign2019" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FBLAWebsiteDesign2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FBLAWebsiteDesign2019" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="flot" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FBLAWebsiteDesign2019" type="b2602c69:ProjectViewProjectNode" />
@@ -223,12 +239,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MixedSignalsGame.github.io" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TeenPAC" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -289,12 +306,13 @@
       <workItem from="1550101723875" duration="5461000" />
       <workItem from="1550204818812" duration="676000" />
       <workItem from="1550207988213" duration="5727000" />
-      <workItem from="1550344569918" duration="2789000" />
+      <workItem from="1550344569918" duration="3058000" />
+      <workItem from="1550357537676" duration="6141000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113834000" />
+    <option name="totallyTimeSpent" value="120244000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -551,41 +569,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="306" column="13" lean-forward="true" selection-start-line="306" selection-start-column="13" selection-end-line="306" selection-end-column="13" />
+        <state relative-caret-position="500">
+          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+        <state relative-caret-position="318">
+          <caret line="62" column="24" lean-forward="true" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/firebase.js">
+    <entry file="file://$PROJECT_DIR$/dashboard/js/flot/flot-active.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="306" lean-forward="true" selection-start-line="306" selection-end-line="306" />
-          <folding>
-            <element signature="n#!!block;n#retrieve_ledger#0" />
-            <element signature="n#!!block;n#retrieve_employees#0" />
-            <element signature="n#!!block;n#retrieve_graph_data#0" />
-            <element signature="n#!!block;n#displayEmployees#0" />
-            <element signature="e#48#54#1" expanded="true" />
-            <element signature="n#!!block;n#displayLedger#0" />
-            <element signature="n#!!block;n#compareEm#0;n#!!block;n#displayLedger#0" />
-          </folding>
+        <state relative-caret-position="168">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="244" column="21" selection-start-line="244" selection-start-column="21" selection-end-line="244" selection-end-column="21" />
+        <state relative-caret-position="436">
+          <caret line="249" column="78" selection-start-line="249" selection-start-column="63" selection-end-line="249" selection-end-column="78" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -607,19 +615,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/js/flot/flot-active.js">
+    <entry file="file://$PROJECT_DIR$/dashboard/firebase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
+        <state relative-caret-position="25">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
           <folding>
-            <element signature="e#14#368#0" />
-            <element signature="e#14#3408#0" />
-            <element signature="e#59#393#0" />
-            <element signature="e#1117#1232#0" />
-            <element signature="e#1346#1619#0" />
-            <element signature="e#1805#2006#0" />
-            <element signature="e#2129#2450#0" />
-            <element signature="e#2632#2836#0" />
+            <element signature="n#!!block;n#retrieve_ledger#0" />
+            <element signature="n#!!block;n#retrieve_employees#0" />
+            <element signature="n#!!block;n#displayEmployees#0" />
+            <element signature="e#48#54#1" expanded="true" />
+            <element signature="n#!!block;n#refreshLedger#0" />
+            <element signature="n#!!block;n#displayLedger#0" />
+            <element signature="n#!!block;n#compareEm#0;n#!!block;n#displayLedger#0" />
+            <element signature="n#!!block;n#refreshLedger#0" />
+            <element signature="n#!!block;n#getGraphValues#0" />
+            <element signature="n#!!block;n#getDate#0" />
+            <element signature="n#!!block;n#compareYears#0" />
           </folding>
         </state>
       </provider>

@@ -127,7 +127,7 @@
                                         <button onclick="toggleDisplay('assetsG', 't')" id="assetsGt" class="buttonStat">Table</button>
 
                                         <div class="actions graph-rp" style="display: inline-block; float:right;">
-                                            <a class="btn btn-dark btn-circle active tip-top" data-toggle="tooltip" title="Refresh">
+                                            <a class="btn btn-dark btn-circle active tip-top" data-toggle="tooltip" title="Refresh" onclick="refreshGraphs('assets')">
                                                 <i class="fa fa-refresh" aria-hidden="true"></i>
                                             </a>
                                         </div>
@@ -159,11 +159,6 @@
                                     </tr>
                                     </thead>
                                     <tbody id="assetsGvalues">
-                                    <tr>
-                                        <td>100</td>
-                                        <td>1/2/19</td>
-                                    </tr>
-
                                     </tbody>
                                 </table>
                             </div>
@@ -186,7 +181,7 @@
                                             <button onclick="toggleDisplay('expensesG', 'g')" id="expensesGg" class="buttonStat buttonActive">Graph</button>
                                             <button onclick="toggleDisplay('expensesG', 't')" id="expensesGt" class="buttonStat">Table</button>
                                             <div class="actions graph-rp" style="display: inline-block; float:right;">
-                                                <a class="btn btn-dark btn-circle active tip-top" data-toggle="tooltip" title="Refresh">
+                                                <a class="btn btn-dark btn-circle active tip-top" data-toggle="tooltip" title="Refresh" onclick="refreshGraphs('expenses')">
                                                     <i class="fa fa-refresh" aria-hidden="true"></i>
                                                 </a>
                                             </div>
@@ -240,7 +235,7 @@
                                             <button onclick="toggleDisplay('liabilitiesG', 'g')" id="liabilitiesGg" class="buttonStat buttonActive">Graph</button>
                                             <button onclick="toggleDisplay('liabilitiesG', 't')" id="liabilitiesGt" class="buttonStat">Table</button>
                                             <div class="actions graph-rp" style="display: inline-block; float:right;">
-                                                <a class="btn btn-dark btn-circle active tip-top" data-toggle="tooltip" title="Refresh">
+                                                <a class="btn btn-dark btn-circle active tip-top" data-toggle="tooltip" title="Refresh" onclick="refreshGraphs('liabilities')">
                                                     <i class="fa fa-refresh" aria-hidden="true"></i>
                                                 </a>
                                             </div>
@@ -286,7 +281,7 @@
                 <div class="row" style="position:relative;">
                     <div class="addEmployee" id="addE">
                         <div id="addEmployeeSection" class="animated">
-                            <button id="closeButton" onclick="hideAddEmployee()" style="position: relative; float: right; background-color:transparent; border:none;"><b>X</b></button>
+                            <button id="closeButton" onclick="hideAddEmployee()" style="z-index:5; position: relative; float: right; background-color:transparent; border:none;"><b>X</b></button>
                             <div style="position: relative; top: 50%; transform: translate(0, -50%);">
                                 <h1 id="e1">Add Employee</h1>
                                 <div id="namearea" style="padding-top:5%; font-size: 25px;">

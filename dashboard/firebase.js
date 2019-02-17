@@ -1,4 +1,6 @@
 
+var uid = "uid";
+
 document.getElementById("button_asset").onclick = function() {
     var asset_value = document.getElementById("asset_input").value
 
@@ -9,16 +11,22 @@ document.getElementById("button_asset").onclick = function() {
     var yyyy = today.getFullYear();
 
     var full_date = mm + "-" + dd + "-" + yyyy
-    var userId = "uid"
-
+    var userId = uid;
     //push to firebase
     
-    firebase.database().ref('users/' + userId + '/graphs/').child("assets").once("value").then(function(snapshot) {
-      //console.log("there are " + snapshot.numChildren() + " children")
-      //push to firebase
-      firebase.database().ref('users/' + userId + '/graphs/assets/' + "entry" + (snapshot.numChildren() + 1)).set({
-          value: asset_value
-      });
+    new Promise(resolve => {
+        firebase.database().ref('users/' + userId + '/graphs/').child("assets").once("value").then(function(snapshot) {
+            //console.log("there are " + snapshot.numChildren() + " children")
+            //push to firebase
+            firebase.database().ref('users/' + userId + '/graphs/assets/' + "entry" + (snapshot.numChildren() + 1)).set({
+                value: asset_value,
+                date: full_date
+            });
+            resolve();
+        });
+    }).then((res)=>{
+        document.getElementById("asset_input").value="";
+        refreshGraphs("assets");
     });
 
 }
@@ -33,16 +41,22 @@ document.getElementById("button_expense").onclick = function() {
     var yyyy = today.getFullYear();
 
     var full_date = mm + "-" + dd + "-" + yyyy
-    var userId = "uid"
-
+    var userId = uid;
     //push to firebase
-    
-    firebase.database().ref('users/' + userId + '/graphs/').child("expenses").once("value").then(function(snapshot) {
-      //console.log("there are " + snapshot.numChildren() + " children")
-      //push to firebase
-      firebase.database().ref('users/' + userId + '/graphs/expenses/' + "entry" + (snapshot.numChildren() + 1)).set({
-          value: asset_value
-      });
+
+    new Promise(resolve => {
+        firebase.database().ref('users/' + userId + '/graphs/').child("expenses").once("value").then(function(snapshot) {
+            //console.log("there are " + snapshot.numChildren() + " children")
+            //push to firebase
+            firebase.database().ref('users/' + userId + '/graphs/expenses/' + "entry" + (snapshot.numChildren() + 1)).set({
+                value: asset_value,
+                date: full_date
+            });
+            resolve();
+        });
+    }).then((res)=>{
+        document.getElementById("expense_input").value="";
+        refreshGraphs("expenses");
     });
 
 }
@@ -57,17 +71,24 @@ document.getElementById("button_liability").onclick = function() {
     var yyyy = today.getFullYear();
 
     var full_date = mm + "-" + dd + "-" + yyyy
-    var userId = "uid"
+    var userId = uid
 
     //push to firebase
 
-    
-    firebase.database().ref('users/' + userId + '/graphs/').child("liabilities").once("value").then(function(snapshot) {
-      //console.log("there are " + snapshot.numChildren() + " children")
-      //push to firebase
-      firebase.database().ref('users/' + userId + '/graphs/liabilities/' + "entry" + (snapshot.numChildren() + 1)).set({
-          value: asset_value
-      });
+
+    new Promise(resolve => {
+        firebase.database().ref('users/' + userId + '/graphs/').child("liabilities").once("value").then(function(snapshot) {
+            //console.log("there are " + snapshot.numChildren() + " children")
+            //push to firebase
+            firebase.database().ref('users/' + userId + '/graphs/liabilities/' + "entry" + (snapshot.numChildren() + 1)).set({
+                value: asset_value,
+                date: full_date
+            });
+            resolve();
+        });
+    }).then((res)=>{
+        document.getElementById("liability_input").value="";
+        refreshGraphs("liabilities");
     });
 
 }
@@ -84,17 +105,25 @@ document.getElementById("addLedgerB").onclick = function() {
     var yyyy = today.getFullYear();
 
     var full_date = mm + "-" + dd + "-" + yyyy
-    var userId = "uid"
+    var userId = uid
     
-    firebase.database().ref('users/' + userId + '/table/').child("ledger").once("value").then(function(snapshot) {
-      //console.log("there are " + snapshot.numChildren() + " children")
-      //push to firebase
-      firebase.database().ref('users/' + userId + '/table/ledger/' + "entry" + (snapshot.numChildren() + 1)).set({
-          credit: credit,
-          date: full_date,
-          debit: debit,
-          name: account_name
-      });
+    new Promise(resolve => {
+        firebase.database().ref('users/' + userId + '/table/').child("ledger").once("value").then(function(snapshot) {
+            //console.log("there are " + snapshot.numChildren() + " children")
+            //push to firebase
+            firebase.database().ref('users/' + userId + '/table/ledger/' + "entry" + (snapshot.numChildren() + 1)).set({
+                credit: credit,
+                date: full_date,
+                debit: debit,
+                name: account_name
+            });
+            resolve();
+        });
+    }).then((res)=>{
+        document.getElementById("accName").value = "";
+        document.getElementById("credit").value = "";
+        document.getElementById("debit").value = "";
+        refreshLedger();
     });
 
 }
@@ -127,64 +156,60 @@ class Ledger_Item {
 function retrieve_ledger() {
     var database = firebase.database();
 
-    var userId = "uid"
+    var userId = uid;
 
-    ledger_list = []
+    var ledger_list = [];
 
-    database.ref('/users/' + userId + '/table/ledger/').on('value', (snapshot) => {
 
-        snapshot.forEach((child) => {
-            console.log(child.key)
-            console.log(child.val()['credit'])
-
-            ledger_list.push(new Ledger_Item(child.val()['name'], child.val()['date'], child.val()['credit'], child.val()['debit']))
-        })
-
+    return new Promise(resolve => {
+        var l = [];
+        database.ref('/users/' + userId + '/table/ledger/').once('value', (snapshot) => {
+            snapshot.forEach((child) => {
+                l.push(new Ledger_Item(child.val()['name'], child.val()['date'], child.val()['credit'], child.val()['debit']))
+            });
+            resolve(l);
+        });
     });
 
-    return ledger_list
 }
+
 
 function retrieve_employees() {
     var database = firebase.database();
 
-    var userId = "uid"
+    var userId = uid;
 
-    employee_list = []
+    var employee_list = [];
 
-    database.ref('/users/' + userId + '/list/employees/').on('value', (snapshot) => {
+    return new Promise(resolve => {
+        var l = [];
+        database.ref('/users/' + userId + '/list/employees/').on('value', (snapshot) => {
 
-        snapshot.forEach((child) => {
-            console.log(child.key)
-            console.log(child.val()['email'])
+            snapshot.forEach((child) => {
 
-            employee_list.push(new Employee(child.val()['email'], child.val()['name'], child.val()['phone']))
-        })
-
+                l.push(new Employee(child.val()['email'], child.val()['name'], child.val()['phone']))
+            })
+            resolve(l);
+        });
     });
-
-    return employee_list
 }
 
-function retrieve_graph_data(data_to_retrieive) {
+function retrieve_graph_data(data_to_retrieve) {
     var database = firebase.database();
-    var userId = "uid" // will be initialized with UID later firebase.auth().currentUser.uid;
+    var userId = uid;
 
 
-    date_list = []
-    value_list = []
 
-    firebase.database().ref('/users/' + userId + '/graphs/' + data_to_retrieive).on('value', (snapshot) => {
+    return new Promise(resolve => {
+        var l = [];
+        firebase.database().ref('/users/' + userId + '/graphs/' + data_to_retrieve).on('value', (snapshot) => {
 
-        snapshot.forEach((child) => {
-            console.log(child.key, child.val());
-            date_list.push(child.key)
-            value_list.push(child.val())
+            snapshot.forEach((child) => {
+                l.push(new GraphData(child.val()['date'], child.val()['value']));
+            });
+            resolve(l);
         });
-
     });
-
-    return new GraphData(date_list, value_list)
 }
 
 
@@ -196,7 +221,7 @@ function displayEmployees(employees) {
     employees.forEach((em) =>  {
         var name = em.name;
         var email = em.email;
-        var phone = em.phone;
+        var phone = "" + em.phone;
         phone = "("+phone.substring(0, 3)+") "+phone.substring(3,6)+"-"+phone.substring(6);
         document.getElementById("memberSectionD").innerHTML +=
             "<div class=\"memberSection\">\n" +
@@ -209,8 +234,13 @@ function displayEmployees(employees) {
     });
 }
 
-function displayLedger(ledgers) {
+function refreshEmployees() {
+    retrieve_employees().then((res) => {
+        displayEmployees(res)
+    });
+}
 
+function displayLedger(ledgers) {
     function compareEm(a,b) {
         if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
         else if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
@@ -241,14 +271,12 @@ function displayLedger(ledgers) {
     }
 
     ledgers.sort(compareEm);
-
     document.getElementById("ledgerDisplay").innerHTML = "";
 
     var cAcc = "";
     var totalC = 0;
     var totalD = 0;
     var sectionS = "";
-
     ledgers.forEach((le) =>{
         if (cAcc.toLowerCase() != le.name.toLowerCase()) {
             if (cAcc != "") {
@@ -308,6 +336,13 @@ function displayLedger(ledgers) {
 
 }
 
+function refreshLedger() {
+    retrieve_ledger().then((res) => {
+        displayLedger(res)
+    });
+}
+
+
 function displayGraphs(type, values) {
     var table = document.getElementById(type+"Gvalues");
     table.innerHTML = "";
@@ -324,6 +359,11 @@ function displayGraphs(type, values) {
     document.getElementById(type+"TotalGD").innerText = ""+totalvalue;
 }
 
+function refreshGraphs(type) {
+    retrieve_graph_data(type).then((res) => {
+        displayGraphs(type, res);
+    });
+}
 
 function getGraphValues(val) {
     var newVal =[];
@@ -333,9 +373,9 @@ function getGraphValues(val) {
         newVal.push([c, v.value]);
         c++;
     });
-    console.log(newVal);
     return newVal;
 }
+
 
 function getDate(dString) {
      return {
@@ -365,29 +405,9 @@ function compareYears(a,b) {
 
 }
 
-var em = new Employee("j@", "john", "4085154321");
-displayEmployees([em, em]);
 
-var l1 = new Ledger_Item("B", "01-07-19", 100, 1);
-var l2 = new Ledger_Item("b", "1-7-19", 1, 1);
-var l3 = new Ledger_Item("c", "1-3-19", 0, 1);
-
-
-displayLedger([l1, l2, l1, l3]);
-
-var g1 = new GraphData("1-5-19", 100);
-var g2 = new GraphData("1-5-19", 110);
-var g4 = new GraphData("1-7-19", 100);
-var g5 = new GraphData("2-7-19", 100);
-var g6 = new GraphData("1-7-18", 100);
-var g7 = new GraphData("1-5-11", 100);
-var g8 = new GraphData("2-2-19", 100);
-var g9 = new GraphData("11-71-19", 100);
-var g10 = new GraphData("1-74-19", 100);
-var g11 = new GraphData("1-71-19", 100);
-var g12 = new GraphData("11-7-19", 100);
-var g13 = new GraphData("1-7-129", 100);
-
-displayGraphs("assets", [g1, g2, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13]);
-displayGraphs("liabilities", [g1, g2, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13]);
-displayGraphs("expenses", [g1, g2, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13]);
+refreshLedger();
+refreshEmployees();
+refreshGraphs("assets");
+refreshGraphs("expenses");
+refreshGraphs("liabilities");
