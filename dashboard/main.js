@@ -56,7 +56,7 @@ function addEmployee() {
             document.getElementById("addEButton").innerHTML = "<strong>Add</strong>";
         }, 1000);
     } else {
-        var userId = "uid";
+        var userId = sessionStorage.getItem("uid");
 
         new Promise(resolve => {
             firebase.database().ref('users/' + userId + '/list/').child("employees").once("value").then(function(snapshot) {

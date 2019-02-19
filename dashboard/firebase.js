@@ -1,9 +1,72 @@
 
-var uid = "uid";
+var uid = sessionStorage.getItem("uid");
+if (uid == "") {
+    window.location.href = "../Login-Signup/index.html";
+}
+
+firebase.database().ref('users/' + uid + '/graphs/').child("assets").once("value").then(function(snapshot) {
+
+    if (snapshot.numChildren() < 2) {
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1; //January is 0!
+        var yyyy = today.getFullYear();
+
+        var full_date = mm + "-" + dd + "-" + yyyy
+        firebase.database().ref('users/' + uid + '/graphs/assets/' + "entry" + (snapshot.numChildren() + 1)).set({
+            value: 0,
+            date: full_date
+        });
+        refreshGraphs("assets");
+    }
+});
+
+firebase.database().ref('users/' + uid + '/graphs/').child("expenses").once("value").then(function(snapshot) {
+
+    if (snapshot.numChildren() < 1) {
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1; //January is 0!
+        var yyyy = today.getFullYear();
+
+        var full_date = mm + "-" + dd + "-" + yyyy
+        firebase.database().ref('users/' + uid + '/graphs/expenses/' + "entry" + (snapshot.numChildren() + 1)).set({
+            value: 0,
+            date: full_date
+        });
+
+        refreshGraphs("expenses");
+    }
+});
+
+firebase.database().ref('users/' + uid + '/graphs/').child("liabilities").once("value").then(function(snapshot) {
+    if (snapshot.numChildren() < 1) {
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1; //January is 0!
+        var yyyy = today.getFullYear();
+
+        var full_date = mm + "-" + dd + "-" + yyyy
+
+        firebase.database().ref('users/' + uid + '/graphs/liabilities/' + "entry" + (snapshot.numChildren() + 1)).set({
+            value: 0,
+            date: full_date
+        });
+
+        refreshGraphs("liabilities");
+    }
+});
+
+
+
+function logout() {
+    sessionStorage.setItem("uid", "");
+    window.location.href = "../Login-Signup/index.html";
+}
 
 document.getElementById("button_asset").onclick = function() {
     var asset_value = document.getElementById("asset_input").value
-
+    if (asset_value=="") return;
     //get the current date
     var today = new Date();
     var dd = today.getDate();
@@ -33,7 +96,7 @@ document.getElementById("button_asset").onclick = function() {
 
 document.getElementById("button_expense").onclick = function() {
     var asset_value = document.getElementById("expense_input").value
-
+    if (asset_value=="") return;
     //get the current date
     var today = new Date();
     var dd = today.getDate();
@@ -63,7 +126,7 @@ document.getElementById("button_expense").onclick = function() {
 
 document.getElementById("button_liability").onclick = function() {
     var asset_value = document.getElementById("liability_input").value
-
+    if (asset_value=="") return;
     //get the current date
     var today = new Date();
     var dd = today.getDate();
@@ -97,6 +160,10 @@ document.getElementById("addLedgerB").onclick = function() {
     var account_name = document.getElementById("accName").value
     var credit = document.getElementById("credit").value
     var debit = document.getElementById("debit").value
+
+    if (account_name=="") return;
+    if (credit=="") credit = "0";
+    if (debit=="") debit="0";
 
     //get the current date
     var today = new Date();
@@ -405,9 +472,12 @@ function compareYears(a,b) {
 
 }
 
+function refreshAll() {
+    refreshLedger();
+    refreshEmployees();
+    refreshGraphs("assets");
+    refreshGraphs("expenses");
+    refreshGraphs("liabilities");
+}
 
-refreshLedger();
-refreshEmployees();
-refreshGraphs("assets");
-refreshGraphs("expenses");
-refreshGraphs("liabilities");
+refreshAll();

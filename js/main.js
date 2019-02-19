@@ -50,8 +50,8 @@ $(document).ready(function () {
                 margin: 0,
                 items: 1,
                 nav: true,
-                autoplay: 3000,
-                smartSpeed: 1500,
+                autoplay: 0,
+                smartSpeed: 1000,
                 dots: false,
                 navText: ['<img src="img/left-arrow.png">', '<img src="img/right-arrow.png">'],
                 responsiveClass: true

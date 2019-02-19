@@ -1,6 +1,29 @@
 ﻿
+.bottomPage {
+    background-color:#8b0202;
+}
 
+.iconBottom {
+    margin:0 5px;
+}
 
+#portalB {
+    width: 250px;
+    height: 75px;
+    font-size: 25px;
+    color:white;
+    border-radius:5px;
+    background-color:#f4636ebd;
+    transition: all 0.2s ease-in-out;
+}
+
+#portalB:hover {
+    transform: scale(1.3);
+}
+
+#portalB:focus {
+    outline:none;
+}
 
 
 
@@ -121,13 +144,14 @@
 }
 
 .aboutTitle {
-    font-size: 8em;
-    color: #d01d33;
-    font-family: 'Lobster', cursive;
-    padding: 15px;
-}
+     font-size: 8em;
+     color: #d01d33;
+     font-family: 'Lobster', cursive;
+     padding: 15px;
+ }
 
-.aboutTitle1, .aboutTitle2 {
+
+.aboutTitle1, .aboutTitle2, .aboutTitle3 {
     font-size: 7vw;
     color: #d01d33;
     font-family: 'Lobster', cursive;
@@ -144,7 +168,7 @@
 
 
 .testimonyP {
-    font-size: 1.7vw;
+    font-size: 1.2vw;
     color:#d01d33;
 }
 

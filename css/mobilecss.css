@@ -1,5 +1,28 @@
 @media only screen and (max-width:420px) {
-    
+
+    #pPolicy h1 {
+        font-size: 30px;
+    }
+
+    #portalB {
+        width: 175px !important;
+        font-size: 18px !important;
+        height:55px !important;
+    }
+
+    #quoteCatch {
+        font-size: 1.2rem !important;
+    }
+
+    .catchSection {
+        padding: 0.5rem 10vw !important;
+    }
+
+    .catchImage {
+        height: 250px !important;
+        width: 250px!important;
+    }
+
     .scheduleTitle {
 	font-size: 3em !important;
 	padding-top: 10vh !important;
@@ -30,6 +53,10 @@
         font-size: 6vw !important;
     }
 
+    .aboutTitle3 {
+        font-size: 3em !important;
+        padding-top: 14vh !important;
+    }
     .aboutTitle {
         font-size: 5em !important;
         padding-top: 10vh !important;
@@ -53,7 +80,7 @@
     }
 
     .testimonyP {
-        font-size: 1em !important;
+        font-size: 0.9em !important;
     }
 
     .staffName {

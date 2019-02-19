@@ -1,5 +1,16 @@
 
+#logoutB {
+    position:relative;
+    float:right;
+    margin-right:5px;
+    font-weight:600;
+    color:white;
+    background-color: #f88888;
+}
 
+#logoutB:hover {
+    background-color: #a00c18;
+}
 
 .addEmployee {
     position: absolute;
@@ -168,6 +179,8 @@
 
 #addLedgerB:focus {
     outline: none;
+    background-color:darkred;
+    transform: scale(1.3);
 }
 
 .memberSection {
