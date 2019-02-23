@@ -6,9 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta charset="UTF-8">
 
+	<link rel="shortcut icon" type="image/png" href="img/icon.png">
+
 	<link rel="stylesheet" href="css/linearicons.css">
 
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -44,7 +47,7 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 					<!-- Logo of the navbar -->
 					<div class="col-3 logo">
 						<a href="home.html">
-							<img id="logoNav" class="mx-auto" src="img/logo.png" alt="" style="padding: 10px; border-radius: 50%; background-color: white;">
+							<img id="logoNav" class="mx-auto" src="img/logo.jpg" alt="" style="padding: 10px; border-radius: 50%; background-color: white;">
 						</a>
 					</div>
 
@@ -164,30 +167,10 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 
 			</div>
 		</div>
-		<!--
-		<div class="container" style="height: 30vw; ">
-
-			<div class="cpImg container" style="background: url('img/img3.jpg') no-repeat center center/cover;
-			float: right; width: 50%; height: 100%;">
-
-			</div>
-			<div class="cpT animation-element slide-left" style="position: relative; width: 50%; height: 50%;
-				color: red; text-align: left; padding-right:50px;
-					font-size: 2.5vw;">
-				<font style="font-size: 2em;">Analytics</font> <br>at your Fingertips
-				<br><font style="font-size: 0.7em; line-height:150%"><p>
-				Our web portals come fully equipped with an
-				arsenal of powerful deep machine learning to give you the predictive power
-				to adapt your business practices to meet the changes tides of the market. </p>
-			</font>
-			</div>
-
-		</div>
-		-->
 	</section>
 	</div>
 	<br><br><br>
-	<section style="height:700px; padding-top: 4rem; background-color: #db2c49 !important;">
+	<section id="home-email" style="height:700px; padding-top: 4rem; background-color: #db2c49 !important;">
 		<div class="inner" style="font-size: 1.5vw;">
 
 			<div id="contactUS1" style="
@@ -215,7 +198,7 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 						<textarea name="message" id="message" rows="7" placeholder="Tell me what is on your mind"></textarea>
 					</div>
 					<br>
-					<button id="buttonForm"
+					<button id="buttonForm" class="sendEmailButton"
 					 style="background-color: transparent; border-radius: 8px; color: white;
 					border: solid 2px rgba(255, 255, 255, 0.3);">
 							<i class="fa fa-paper-plane"></i>&nbsp;Send</button>
@@ -229,18 +212,58 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 
 	</section>
 
-	<div class="bottomPage" style="height:200px;">
-		<div class="align-content-center" style="width:100%; padding: 40px 35px 50px 35px;
-		background-color:#c30606;">
-			<div style="width: 128px; margin: 0 auto;">
-				<img src="img/icon/twitter.png" class="iconBottom">
-				<img src="img/icon/twitter.png" class="iconBottom">
-				<img src="img/icon/twitter.png" class="iconBottom">
+	<div class="bottomPage" style="height:500px;">
+		<div class="align-content-center" style="width:100%; height:100%; padding: 40px 35px 50px 35px; margin-top: 80px;
+		background: linear-gradient(#db2c49, #8b0202)">
+			<div style="width: 200px; margin: 80px auto 40px auto;">
+				<a href="https://instagram.com" target="_blank">
+					<i class="fab fa-instagram iconBottom"></i>
+				</a>
+				<a href="https://twitter.com" target="_blank">
+					<i class="fab fa-twitter iconBottom"></i>
+				</a>
+				<a href="https://facebook.com" target="_blank">
+					<i class="fab fa-facebook-square iconBottom"></i>
+				</a>
+			</div>
+			<div class="container bottomExtra">
+				<div class="row">
+					<div class="col-6 col-md-6 ">
+						<span style="font-size: 20px;"><strong>Site Map</strong></span><br>
+						<span>
+							<a href="home.html">Home</a>&emsp;
+							<a href="about.html">About</a>
+						</span>
+						<br>
+						<span>
+							<a href="schedule.html">Schedule</a>&emsp;
+							<a href="faq.html">FAQ</a>
+						</span><br>
+						<span>
+							<a href="pricing.html">Pricing</a>&emsp;
+							<a href="portal.html">Dashboard</a>
+						</span>
+					</div>
+					<div class="col-6 col-md-6">
+						<span style="font-size: 20px; line-height:0.9"><strong>Alternate Accounting Sites</strong></span><br>
+						<span>
+							<a href="https://www.mozzetti.com/" target="_blank">Mozzetti, Inc.</a>
+						</span><br>
+						<span>
+							<a href="http://bhuiyancpa.com/" target="_blank">Bhuiyan</a>
+						</span><br>
+						<span>
+							<a href="http://www.bandraccounting.com/" target="_blank">B&R Accounting</a>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="bottomText">
+				Copyright © 2019 Accuracy Accounting - All Rights Reserved -
+				<a href="portal.html" style="color:white; text-decoration: underline white;" class="ppolicy">Privacy Policy</a>
 			</div>
 		</div>
-		<div style="position:relative; bottom:0; color:white; text-align:center; margin-top: 20px;">
-			©2019 AccuracyAccounting
-		</div>
+
 	</div>
 
 	<script src="js/vendor/jquery-2.2.4.min.js"></script>

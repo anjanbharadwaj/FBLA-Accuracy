@@ -1,5 +1,23 @@
 @media only screen and (max-width:420px) {
 
+    #home-email {
+        height: 500px !important;
+    }
+
+    .bottomExtra .col-6  {
+        font-size: 10px !important;
+    }
+
+    .bottomExtra .col-6 strong {
+        font-size: 13px !important;
+    }
+
+    .bottomText {
+        font-size: 12px !important;
+    }
+
+
+
     #pPolicy h1 {
         font-size: 30px;
     }

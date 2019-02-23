@@ -1,10 +1,46 @@
 ﻿
+.sendEmailButton:hover {
+    cursor: pointer;
+    border: solid 2px white !important;
+}
+
+.ppolicy:hover {
+    color: black !important;
+    text-decoration: underline black !important;
+}
+
+
 .bottomPage {
-    background-color:#8b0202;
+}
+
+
+.bottomText {
+    position:relative;
+    bottom:0;
+    color:white;
+    text-align:center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.bottomExtra .col-md-6 {
+    font-size: 17px;
+    text-align:center;
+    color:white;
+}
+
+.bottomExtra .col-md-6 a {
+    color:white;
+}
+
+.bottomExtra .col-md-6 a:hover {
+    color:black !important;
 }
 
 .iconBottom {
-    margin:0 5px;
+    margin:0 calc((200px - 3 * 40px) / 6);
+    font-size: 40px !important;
+    color:black !important;
 }
 
 #portalB {
@@ -163,7 +199,7 @@
 }
 
 #logoNav {
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 
