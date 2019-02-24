@@ -467,7 +467,7 @@ iframe {
   transition: all 0.4s;
 }
 
-.login100-form-btn:hover:before {
+.login100-form-btn:hover:before, .login100-form-btn:focus:before {
   opacity: 1;
 }
 

@@ -64,6 +64,22 @@ function logout() {
     window.location.href = "../Login-Signup/index.html";
 }
 
+
+function download(file) {
+    var fileRef = firebase.storage().ref().child(file+".PDF");
+    fileRef.getDownloadURL().then(function(url) {
+        console.log(url);
+        //document.getElementById("download_frame").src = url;
+        var link = document.createElement('a');
+        link.href = url;
+        link.target="_blank";
+        link.download = file+'.pdf';
+        link.dispatchEvent(new MouseEvent('click'));
+    }).catch(function(error) {
+        console.log(error);
+    });
+}
+
 document.getElementById("button_asset").onclick = function() {
     var asset_value = document.getElementById("asset_input").value
     if (asset_value=="") return;

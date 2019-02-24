@@ -1,5 +1,13 @@
 @media only screen and (max-width:420px) {
 
+    #indvServices {
+        padding-left:30px !important;
+    }
+
+    #businessesServices {
+        font-size: 12px;
+    }
+
     #home-email {
         height: 500px !important;
     }
@@ -67,7 +75,7 @@
     }
 
     #faqTitle {
-        padding-top: 10vh !important;
+        padding-top: 15vh !important;
         font-size: 6vw !important;
     }
 
@@ -102,11 +110,11 @@
     }
 
     .staffName {
-        font-size: 25px;
+        font-size: 17px;
     }
 
     .staffPosition {
-        font-size: 16px;
+        font-size: 11px !important;
     }
 
 
