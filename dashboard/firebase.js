@@ -1,12 +1,12 @@
 
 var uid = sessionStorage.getItem("uid");
-if (uid == "") {
+if (uid == "" || uid == null) {
     window.location.href = "../Login-Signup/index.html";
 }
 
 firebase.database().ref('users/' + uid + '/graphs/').child("assets").once("value").then(function(snapshot) {
 
-    if (snapshot.numChildren() < 2) {
+    if (snapshot.numChildren() < 1) {
         var today = new Date();
         var dd = today.getDate();
         var mm = today.getMonth() + 1; //January is 0!

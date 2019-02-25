@@ -23,8 +23,11 @@ function showAddEmployee() {
     element.classList.add('bounceInUp');
 }
 
+function a() {}
+
 function hideAddEmployee() {
     const element = document.getElementById("addEmployeeSection");
+    document.getElementById("addemployeeB").onclick = a();
 
     function handleAnimationEnd() {
         document.getElementById("addE").style.visibility="collapse";
@@ -34,6 +37,7 @@ function hideAddEmployee() {
         document.getElementById("nameE").value = "";
 
         element.removeEventListener('animationend', handleAnimationEnd);
+        document.getElementById("addemployeeB").onclick = showAddEmployee();
     }
     element.addEventListener('animationend', handleAnimationEnd);
 

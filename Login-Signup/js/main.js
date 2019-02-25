@@ -25,9 +25,34 @@ function hideForgotPass() {
 
 function resetPass() {
     var email = document.getElementById("emailFG").value;
-    firebase.auth().sendPasswordResetEmail(email).catch(function(error) {
-        console.log(error.message);
+    new Promise(resolve => {
+        firebase.auth().sendPasswordResetEmail(email).catch(function(error) {
+            console.log(error.code);
+            if (error.code == "auth/invalid-email") {
+                document.getElementById("sendEmailB").innerText = "Invalid Email";
+                setTimeout(function() {
+                    document.getElementById("sendEmailB").innerText = "Send Reset Email";
+                }, 1500);
+                return false;
+            } else if (error.code == "auth/user-not-found") {
+                document.getElementById("sendEmailB").innerText = "User Not Found";
+                setTimeout(function() {
+                    document.getElementById("sendEmailB").innerText = "Send Reset Email";
+                }, 1500);
+                return false;
+            }
+        });
+        return true;
+    }).then((res) =>{
+        if (res==false) return;
+        document.getElementById("emailFG").value = "";
+        document.getElementById("sendEmailB").innerText = "Sent!";
+        setTimeout(function() {
+            document.getElementById("sendEmailB").innerText = "Send Reset Email";
+        }, 1500);
     });
+
+
 }
 
 

@@ -68,7 +68,7 @@ textarea:focus, .form-control:focus, button:focus {
   outline: none !important; }
 
 body {
-  color: #777777;
+  color: black !important;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 15px;
   font-weight: 400;
