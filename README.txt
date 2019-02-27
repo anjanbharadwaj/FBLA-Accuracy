@@ -37,9 +37,6 @@ A: Make sure WIFI is enabled. Or if you are viewing the site as local-host make 
 Q: I can't create an account on your dashboard!
 A: Make sure your password is over 6 characters and your username has an email provider attached (ex @gmail.com)
 
-Q: Where is the code for the game?
-A: The code in the game should be viewable from the 3D Player (not the zip) included in the project submission.
-
 FUTURE VISIONS
 - - - - - - - - - - - - -
 In the future, we hope to take advantage of the information on our dashboard to add machine-learning based 
