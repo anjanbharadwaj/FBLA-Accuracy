@@ -32,10 +32,13 @@ Q: The animation is not showing up?
 A: Make sure that you enable flash player on your web browser. In some cases this can be done by right clicking the animation page and selecting show animation. 
 
 Q: The site isn't loading?
-A: Make sure WIFI is enabled. Or if you are viewing the site as local-host make sure to open index.html (by double clicking the file)
+A: Make sure WIFI is enabled. Or if you are viewing the site as local-host make sure to open index.html (by double clicking the file). However, to login into the dashboard, you will need to be connected to WIFI.
 
 Q: I can't create an account on your dashboard!
 A: Make sure your password is over 6 characters and your username has an email provider attached (ex @gmail.com)
+
+Q: Why is the website seem squished or elongated?
+A: Try zooming in or out of your browser. Many times, you have zoomed in or out too much, which causes the website to attempt to resize. 
 
 FUTURE VISIONS
 - - - - - - - - - - - - -

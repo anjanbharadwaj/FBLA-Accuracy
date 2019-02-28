@@ -80,8 +80,9 @@ input:checked + .slider:before {
 }
 
 .ppolicy:hover {
-    color: black !important;
-    text-decoration: underline black !important;
+    font-weight:600;
+    color: white !important;
+    text-decoration: underline white !important;
 }
 
 
@@ -114,13 +115,14 @@ input:checked + .slider:before {
 }
 
 .bottomExtra .col-md-6 a:hover {
-    color:black !important;
+    font-weight: 600 !important;
+    color:white !important;
 }
 
 .iconBottom {
     margin:0 calc((200px - 3 * 40px) / 6);
     font-size: 40px !important;
-    color:black !important;
+    color:white !important;
 }
 
 #portalB {
@@ -266,6 +268,12 @@ input:checked + .slider:before {
      padding: 15px;
  }
 
+.subtitle {
+    font-size: 3em;
+    color: black;
+    font-family: 'Staatliches', sans-serif;
+    padding: 15px;
+}
 
 .aboutTitle1, .aboutTitle2, .aboutTitle3 {
     font-size: 7vw;

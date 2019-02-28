@@ -78,7 +78,7 @@ function addEmployee() {
         document.getElementById("phoneE").value = "";
         document.getElementById("nameE").value = "";
         document.getElementById("addEButton").style.backgroundColor = "#26e804";
-        document.getElementById("addEButton").innerHTML = "<strong>Sent</strong>";
+        document.getElementById("addEButton").innerHTML = "<strong>Added</strong>";
         setTimeout(function() {
             document.getElementById("addEButton").style.backgroundColor = "#d01d33";
             document.getElementById("addEButton").innerHTML = "<strong>Add</strong>";
